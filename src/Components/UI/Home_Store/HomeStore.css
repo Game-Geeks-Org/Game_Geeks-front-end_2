@@ -1,0 +1,76 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+.heading{
+    font-family: 'Righteous', cursive;
+}
+
+
+.image-area{
+    text-align: center;
+    position: relative;
+}
+
+.image-area img{
+    width: 100%;
+    height: auto;
+}
+
+.img-btn,
+.image-area:after{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    opacity: 0.8;
+}
+
+
+.img-btn:before:after{
+    opacity:0 ;
+}
+
+.image-area:after{
+    content: "";
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    
+}
+
+.image-area:hover:after{
+   background: rgba(173, 29, 29, 0.6)
+
+}
+
+.img-btn{
+    z-index: 1;
+    margin-bottom: 20px;
+    bottom: 30%;
+    text-align: center;
+    transform: translateY(145px);
+    transition: all .5s cubic-bezier(.13,.62,.81,.91) 0s;
+    position: absolute
+    
+}
+
+
+.image-area:hover .img-btn{
+    transform: translateY(0);
+    opacity: 1;
+
+}
+
+
+
+.image-area .img-btn{
+    opacity: 0;
+}
+
+
+
