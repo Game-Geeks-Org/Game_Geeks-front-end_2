@@ -85,7 +85,7 @@ const toggleMenu = () => menuRef.current.classList.toggle('active__menu')
                 <div className="nav__menu" ref ={menuRef} onClick={toggleMenu}>
                     <ul className="nav__list">
                         { NAV__LINKS.map((item,index) =>(
-                                    <li className="nav-item text-[20px] lg:text-[30px] font-[500] tracking-[2px]" key={index}>
+                                    <li className="nav-item text-[17px] lg:text-[30px] font-[500] tracking-[2px]" key={index}>
                                     <NavLink to={item.url} className={navClass => navClass.isActive ? 'active': ""}>{item.display}</NavLink>
                                 </li>
                              ))}

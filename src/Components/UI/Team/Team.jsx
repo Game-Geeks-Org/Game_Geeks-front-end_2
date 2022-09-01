@@ -17,8 +17,8 @@ function Team() {
   return(
     <div key={id}>
         <img className='bg-transparent rounded-md border-BtnColor border-[6px]' src={img}  alt=''/>
-        <p className='text-white text-[30px] md:text-[51px] text-center tracking-[2px] pt-5'>{name1} <span className='text-BtnColor'>{name2}</span></p>
-        <p className='text-white text-center text-[20px] md:text-[32px] tracking-[2px] pt-[5px]'>{title}</p>
+        <p className='text-white text-[30px] lg:text-[51px] text-center tracking-[2px] pt-5'>{name1} <span className='text-BtnColor'>{name2}</span></p>
+        <p className='text-white text-center text-[20px] lg:text-[32px] tracking-[2px] pt-[5px]'>{title}</p>
     </div>
   )
 })}

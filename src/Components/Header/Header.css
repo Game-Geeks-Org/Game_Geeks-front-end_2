@@ -117,6 +117,41 @@
         display: block;
 
     }
+}
+@media only screen and (max-width: 1024px){
+    .nav__menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#14141f83, #1414f81f);
+        z-index: 222222;
+        display: none;
+    }
+
+    .active__menu{
+        display: block;
+    }
+
+    
+
+    .nav__list{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background: #343444;
+        z-index: 333333;
+        flex-direction: column;
+        padding-top: 40px;
+    }
+
+    .mobile_menu{
+        display: block;
+
+    }
 
     .btn{
         padding: 4px 25px !important;
