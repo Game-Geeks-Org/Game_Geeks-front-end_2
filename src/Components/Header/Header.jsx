@@ -23,7 +23,7 @@ const NAV__LINKS = [
     },
     {
         display: 'NFT Store',
-        url: '/nftsore' 
+        url: '/nftstore' 
     },
   
     {
@@ -79,8 +79,8 @@ return()=>{}
 
 const toggleMenu = () => menuRef.current.classList.toggle('active__menu')
   return (
-    <header className='header'ref={headerRef}>
-            <div className="navigation container">
+    <header className='header pb-[100px]'ref={headerRef}>
+            <div className="navigation  pt-[17px] container">
                <img src={logo}  alt='logo' width='100px' className='image'/>
                 <div className="nav__menu" ref ={menuRef} onClick={toggleMenu}>
                     <ul className="nav__list">

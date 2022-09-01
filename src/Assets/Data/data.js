@@ -1,46 +1,47 @@
 
 import image from '../../Assets/Images/img1.png'
+import ss2 from '../../Assets/Images/ss 2.png'
 
  const TEAM_DATA = [
     {
         id: "01",
-        name1: "Sanket",
-        name2: "Nighot",
+        firstName: "Sanket",
+        SecondName: "Nighot",
         title: "Co-Founder",
         img: image
     },
     {
         id: "02",
-        name1: "Ayush",
-        name2:" Yadav",
+        firstName: "Ayush",
+        SecondName:" Yadav",
         title: "Co-Founder",
         img: image
     },
     {
         id: "03",
-        name1: "Nitish",
-        name2: "Kumar",
+        firstName: "Nitish",
+        SecondName: "Kumar",
         title: "Frontend Developer",
         img: image
     },
     {
         id: "04",
-        name1: "Anish",
-        name2: " Thomas",
+        firstName: "Anish",
+        SecondName: " Thomas",
         title: "Game Developer",
         img: image
     },
     {
         id: "05",
-        name1: "Prateek",
-        name2:'Singh',
+        firstName: "Prateek",
+        SecondName:'Singh',
         title: "Game Developer",
         img: image
     },
     {
         id: "06",
-        name1: "Soumya",
-        name2: "Meher",
+        firstName: "Soumya",
+        SecondName: "Meher",
         title: "Graphic designer",
         img: image
     }
@@ -48,3 +49,67 @@ import image from '../../Assets/Images/img1.png'
 
 
 export default TEAM_DATA
+
+
+export const GAME__DATA = [
+    {   id: '1',
+        name1: 'Space ',
+        name2:'Shooter',
+        imgUrl: ss2
+    },
+    {   id: '2',
+        name1: 'Space ',
+        name2:'Shooter',
+        imgUrl: ss2
+    },
+    {   id: '3',
+        name1: 'Space ',
+        name2:'Shooter',
+        imgUrl: ss2
+    },
+    {   id: '4',
+        name1: 'Space ',
+        name2:'Shooter',
+        imgUrl: ss2
+    },
+    {   id: '5',
+        name1: 'Space ',
+        name2:'Shooter',
+        imgUrl: ss2
+    },
+    {   id: '6',
+        name1: 'Space ',
+        name2:'Shooter',
+        imgUrl: ss2
+    },
+    {   id: '7',
+        name1: 'Space ',
+        name2:'Shooter',
+        imgUrl: ss2
+    },
+    {   id: '8',
+        name1: 'Space ',
+        name2:'Shooter',
+        imgUrl: ss2
+    },
+    {   id: '9',
+        name1: 'Space ',
+        name2:'Shooter',
+        imgUrl: ss2
+    },
+    {   id: '10',
+        name1: 'Space ',
+        name2:'Shooter',
+        imgUrl: ss2
+    },
+    {   id: '11',
+        name1: 'Space ',
+        name2:'Shooter',
+        imgUrl: ss2
+    },
+    {   id: '12',
+        name1: 'Space ',
+        name2:'Shooter',
+        imgUrl: ss2
+    }
+]

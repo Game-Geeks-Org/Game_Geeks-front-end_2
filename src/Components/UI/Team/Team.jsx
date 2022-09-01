@@ -13,11 +13,11 @@ function Team() {
     <div className='sm:grid grid-cols-1 md:grid-cols-2 grid lg:grid-cols-3 xl:grid-cols-3 justify-between items-center mt-32 gap-12'>
 
 {TEAM_DATA.map((item) =>{
-    const {id, title, name1, name2, img} = item
+    const {id, title, firstName, SecondName, img} = item
   return(
     <div key={id}>
         <img className='bg-transparent rounded-md border-BtnColor border-[6px]' src={img}  alt=''/>
-        <p className='text-white text-[30px] lg:text-[51px] text-center tracking-[2px] pt-5'>{name1} <span className='text-BtnColor'>{name2}</span></p>
+        <p className='text-white text-[30px] lg:text-[51px] text-center tracking-[2px] pt-5'>{firstName} <span className='text-BtnColor'>{SecondName}</span></p>
         <p className='text-white text-center text-[20px] lg:text-[32px] tracking-[2px] pt-[5px]'>{title}</p>
     </div>
   )

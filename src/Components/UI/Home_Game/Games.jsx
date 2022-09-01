@@ -61,7 +61,7 @@ function Games() {
         <Slider {...settings}>
     <div className='w-full'>
         <div className='image-area'>
-        <img  className='bg-transparent rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
+        <img  className='rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
             <div className='img-btn'>
                 <button className='text-white text-[20px] bg-[#C0013A9E] py-1 w-[202px] h-[61px] border-none'>Play</button>
             </div>

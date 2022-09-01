@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css"
 import Slider from 'react-slick';
 
 import image from '../../../Assets/Images/img1.png'
-import './HomeStore.css'
+import '../../../Styles/HomeStore.css'
 
 function HomeStore() {
  // AUTOPLAY SLIDER
