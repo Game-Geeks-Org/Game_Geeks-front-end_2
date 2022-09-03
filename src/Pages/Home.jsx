@@ -14,7 +14,6 @@ function Home() {
     <Games />
     <HomeStore />
     <Team />
-    <Footer />
       
     </>
   )

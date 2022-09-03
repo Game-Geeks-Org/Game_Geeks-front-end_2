@@ -7,6 +7,33 @@
 }
 
 
+.game_title{
+    font-size: 72px;
+    color: white;
+    text-align: center;
+    margin-bottom: 170px;
+   
+}
+
+.game_title span{
+    color: #C0013A;
+}
+
+
+.slider_img{
+    border: 6px solid #C0013A;
+
+}
+
+.view_btn{
+    padding: 4px 55px;
+    border: 1px solid #C0013A;
+    background: transparent;
+    margin-top: 35px;
+    color: white;
+    font-size: 23px;
+    border-radius: 4px;
+}
 
 
 .image-area{
@@ -52,12 +79,22 @@
 .img-btn{
     z-index: 1;
     margin-bottom: 20px;
+    color: white;
     bottom: 30%;
     text-align: center;
     transform: translateY(145px);
     transition: all .5s cubic-bezier(.13,.62,.81,.91) 0s;
     position: absolute
     
+}
+
+
+.img-btn button{
+    padding:10px 50px;
+    color: white;
+    border: none;
+    background: #C0013A9E;
+
 }
 
 
@@ -88,38 +125,3 @@
 
 
 
-
- /* .image-container{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform: translate(-50%, -50%);
- }
-
-
-
-
-
- .overlay{
-    position: re;
-    top: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    background: black;
-    cursor: pointer;
- }
-
- .img-btn{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-
- }
-
-
- .image-container:hover .overlay{
-    opacity: 0.8;
- } */

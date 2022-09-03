@@ -7,6 +7,32 @@
     font-family: 'Righteous', cursive;
 }
 
+.home_store{
+    margin-top: 100px;
+}
+
+.store_title{
+    font-size: 72px;
+    color: white;
+    text-align: center;
+    margin-bottom: 170px;
+   
+}
+
+.store_title span{
+    color: #C0013A;
+}
+
+.view_btn{
+    padding: 4px 55px;
+    border: 1px solid #C0013A;
+    background: transparent;
+    margin-top: 35px;
+    color: white;
+    font-size: 23px;
+    border-radius: 4px;
+}
+
 
 .image-area{
     text-align: center;

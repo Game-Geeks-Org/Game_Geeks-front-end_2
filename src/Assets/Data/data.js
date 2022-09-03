@@ -1,5 +1,5 @@
 
-import image from '../../Assets/Images/img1.png'
+import image from '../../Assets/Images/team_ss 2.png'
 import ss2 from '../../Assets/Images/ss 2.png'
 
  const TEAM_DATA = [

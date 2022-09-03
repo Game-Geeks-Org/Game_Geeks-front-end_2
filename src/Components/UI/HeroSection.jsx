@@ -1,24 +1,33 @@
 import React from 'react'
 import img1 from '../../Assets/Images/img1.png'
 import { Link } from "react-router-dom";
+import './HeroSection.css'
+import {Container, Row, Col}  from 'reactstrap'
 
 function HeroSection() {
   return (
-  <section className='container mt-[100px]'>
-    <div className='sm:grid pt-20 grid-cols-1 md:grid-cols-1 grid lg:flex container justify-between items-center md:pt-40'>
-      <div>
-        <span className=' text-5xl md:text-7xl font-extrabold text-white'>PLAY TO </span><span className='text-BtnColor text-5xl md:text-7xl'>WIN</span>
-        <p className=' text-[17px] md:text-[29px] mt-[23px] text-white tracking-[2px] my-7'>A Decentralized Gaming Hub built over Tezos <br/> Blockchain.</p>
-      </div>
-      <div className='my-10'>
-      <Link to="/spaceshooter"> <img  src={img1} alt='hero'/> </Link>
-      </div>
-    </div>
-    <div className='container text-left md:my-5 flex lg:mt-[60px] pb-6 gap-8'>
-        <button className='py-2 text-[7px] md:text-[20px] md:py-4 text-white bg-BtnColor rounded-[4px] px-[45px] hover:bg-transparent border-BtnColor border-2 hover:text-white'>Enter App</button>
-         <button className='py-2  text-[7px] md:text-[20px] md:py-4 px-[45px] tracking-[2px] bg-transparent border-BtnColor border-2 text-white rounded-[4px]  hover:bg-BtnColor hover:text-white'>Open Store</button>
-         </div>
-  </section>
+    <section className='hero__section'>
+    <Container>
+      <Row>
+        <Col lg='6' md='6'>
+          <div className='hero__content'>
+            <h4 className='play'>PLAY TO <span className='win'>WIN</span></h4>
+            <p className='desc'>A Decentralized Gaming Hub built over Tezos Blockchain. </p>
+
+              <div className="hero__btn d-flex align-items-center gap-4">
+              <button className='hero-btn1 d-flex align-items-center gap-2'>Enter App</button>
+              <button className='hero-btn2 d-flex align-items-center gap-2'>Open Store</button>
+          </div>
+              </div>
+        </Col>
+        <Col lg='6' md='6'>
+          <div className="hero-img">
+            <img src={img1} alt='hero' className='w-100'/>
+          </div>
+        </Col>
+      </Row>
+    </Container>
+   </section>  
   )
 }
 

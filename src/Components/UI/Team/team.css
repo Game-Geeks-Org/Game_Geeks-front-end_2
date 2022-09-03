@@ -8,3 +8,47 @@
 .heading{
     font-family: 'Righteous', cursive;
 }
+
+
+.team_name{
+    text-align: center;
+    color: white;
+    font-size: 51px;
+}
+
+.team_name span{
+    color: #C0013A;
+    ;
+}
+.team_role{
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    
+}
+
+.live__team{
+    font-family: 'Righteous';
+    margin-top: 300px;
+}
+
+
+.team_img{
+    border: 6px solid #C0013A;
+    border-radius: 20px;
+   
+}
+
+
+@media only screen and (max-width: 991px){
+    .team_img img{
+        width: 100%;
+    }
+
+    .team_name{
+        font-size: 30px;
+    }
+    .team_role{
+        font-size: 15px;
+    }
+}

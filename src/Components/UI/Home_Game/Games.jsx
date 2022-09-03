@@ -57,43 +57,43 @@ function Games() {
   return (
    <section className='container mt-52'>
     <div className='pb-[150px] overflow-hidden'>
-    <h2 className='text-white text-5xl md:text-7xl text-center uppercase heading'>Play <span className='text-BtnColor text-5xl md:text-7xl'>Games</span> </h2>
+    <h2 className='game_title heading'>Play <span>Games</span> </h2>
     </div>
-    <div className='grid grid-cols-1 gap-9 md:grid-cols-2 lg:flex mx-9'>
+    <div className=''>
         <div className='App '>
         <Slider {...settings}>
     <div className='w-full'>
         <div className='image-area'>
-        <img  className='rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
+        <img  className='slider_img' src={image}  alt='game'/>
             <div className='img-btn'>
-            <Link to="/spaceshooter"><button className='text-white text-[20px] bg-[#C0013A9E] py-1 w-[202px] h-[61px] border-none'>Play</button></Link>
+            <Link to="/spaceshooter"><button className=''>Play</button></Link>
             </div>
         </div>
           
     </div>
     <div className='w-full'>
         <div className='image-area'>
-        <img  className='bg-transparent rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
+        <img  className='slider_img' src={image}  alt='game'/>
             <div className='img-btn'>
-            <Link to="/spaceshooter"><button className='text-white text-[20px] bg-[#C0013A9E] py-1 w-[202px] h-[61px] border-none'>Play</button></Link>
+            <Link to="/spaceshooter"><button className=''>Play</button></Link>
             </div>
         </div>
           
     </div>
     <div className='w-full'>
         <div className='image-area'>
-        <img  className='bg-transparent rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
+        <img  className='slider_img' src={image}  alt='game'/>
             <div className='img-btn'>
-              <Link to="/spaceshooter"><button className='text-white text-[20px] bg-[#C0013A9E] py-1 w-[202px] h-[61px] border-none'>Play</button></Link>
+              <Link to="/spaceshooter"><button className=''>Play</button></Link>
             </div>
         </div>
           
     </div>
     <div className='w-full'>
         <div className='image-area'>
-        <img  className='bg-transparent rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
+        <img  className='slider_img' src={image}  alt='game'/>
             <div className='img-btn'>
-            <Link to="/spaceshooter"><button className='text-white text-[20px] bg-[#C0013A9E] py-1 w-[202px] h-[61px] border-none'>Play</button></Link>
+            <Link to="/spaceshooter"><button className=''>Play</button></Link>
             </div>
         </div>
           
@@ -103,8 +103,8 @@ function Games() {
         </div>
  
     </div>
-<div className='text-center mt-[54px]'>
-<button className='py-3 md:py-1 px-[55px] text-[23px] tracking-[2px] bg-transparent border-BtnColor border-2 text-white rounded-[4px]  hover:bg-BtnColor hover:text-white'>View all</button>
+<div className='text-center'>
+<button className='view_btn'>View all</button>
 </div>
    </section>
   )

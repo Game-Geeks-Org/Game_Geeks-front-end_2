@@ -1,0 +1,187 @@
+.hero__section{
+    margin-top: 200px;
+    font-family: 'roboto';
+    margin-bottom: 200px;
+}
+
+.hero__content{
+line-height: 55px;
+margin-top: 120px;
+}
+
+
+.hero__btn{
+    margin-top:50px;
+}
+
+
+.play{
+    font-size: 72px;
+    color: #fff;
+}
+
+.play span{
+    color: #C0013A;
+}
+
+.desc{
+    font-size: 29px;
+    color: white;
+}
+
+
+.hero-btn1 {
+    padding: 7px 70px;
+    border-radius: 4px;
+    background: #C0013AE8;
+    text-align: center;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+
+
+
+.hero-btn1:hover{
+  background: transparent;
+  border: 1px solid #C0013AE8 ;
+    color: white;
+}
+
+
+.hero-btn1:hover a{
+    color: white;
+}
+
+.hero-btn1 .hero-btn2, i{
+    color: white;
+    padding: 5px;
+}
+
+.hero-btn2{
+    background: transparent;
+    border: 1px solid #C0013AE8 ;
+    color: white;
+    padding: 7px 70px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+
+.hero-btn2 a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.hero-btn2:hover{
+    background: #C0013AE8;
+}
+ .hero-btn2:hover a{
+    color: #fff;
+ }
+
+
+ .hero-img{
+    margin-left: auto;
+    margin-top: 100px;
+ }
+
+ .hero-img img{
+    border-radius: 2rem;
+ }
+
+ .h4__nft{
+    color: greenyellow;
+ }
+
+ 
+
+ @media only screen and (max-width: 991px){
+    .hero-img{
+        width: 300px;
+        margin-top: 90px;
+    }
+    .hero__content{
+        font-size: 1.5rem;
+        line-height: 40px;
+    }
+
+    .hero__content p{
+        font-size: 0.8rem ;
+        line-height: 25px;
+    }
+
+    .hero__btn {
+        margin-top: 90px;
+        align-items: center;
+    }
+
+    .hero-btn1{
+        padding: 15px 50px; ;
+    }
+
+    .hero-btn2{
+        padding: 15px 50px; ;
+    }
+
+
+ }
+
+
+ @media only screen and (max-width: 576px){
+.hero-img{
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+.hero-btn1{
+    padding: 7px 30px; ;
+}
+
+.hero-btn2{
+    padding: 7px 30px; ;
+}
+
+.hero__section{
+    margin-top: 5 0px;}
+ }
+
+
+
+ @media only screen and (max-width: 745px){
+   .hero-img{
+        width: 100%;
+        margin: auto;
+        margin-top: 50px;
+    }
+ }
+
+
+ @media only screen and (max-width: 1110px){
+    .hero-img{
+        width: 330px;
+        margin-top: 90px;
+    }
+
+    .hero__content{
+        font-size: 1.5rem;
+        line-height: 40px;
+    }
+
+    .hero__content p{
+        font-size: 0.8rem ;
+        line-height: 25px;
+    }
+
+    .hero__btn {
+        margin-top: 130px;
+        align-items: center;
+    }
+ }

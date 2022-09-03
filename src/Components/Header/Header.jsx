@@ -79,8 +79,8 @@ return()=>{}
 
 const toggleMenu = () => menuRef.current.classList.toggle('active__menu')
   return (
-    <header className='header pb-[100px]'ref={headerRef}>
-            <div className="navigation  pt-[17px] container">
+    <header className='header'ref={headerRef}>
+            <div className="navigation container">
                <img src={logo}  alt='logo' width='100px' className='image'/>
                 <div className="nav__menu" ref ={menuRef} onClick={toggleMenu}>
                     <ul className="nav__list">
@@ -92,8 +92,8 @@ const toggleMenu = () => menuRef.current.classList.toggle('active__menu')
                     </ul>
                 </div>
               
-                <div className="nav-right align-items-center">
-                    <button onClick={wallet ? handleDisconnectWallet : handleConnectWallet}  className='items-center text-white text-[20px] lg:text-[30px] tracking-[2px] cursor-pointer'>          
+                <div className="nav-right">
+                    <button onClick={wallet ? handleDisconnectWallet : handleConnectWallet}  className='connect_btn'>          
                                     
                             
                         {wallet

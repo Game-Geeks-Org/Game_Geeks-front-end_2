@@ -1,4 +1,4 @@
-.Game_banner{
+/* .Game_banner{
     background: url('../Assets/Images/bg1.png');
     background-repeat: no-repeat;
     background-position: center center;
@@ -56,8 +56,14 @@
     color: white;
     box-shadow: 10px 10px 42px 0px rgba(255, 30, 30, 0.5);
     ;
-}
+} */
 
+
+
+.game_title{
+    margin-top: 300px;
+    font-size: 2rem;
+}
 
 
 

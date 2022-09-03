@@ -1,19 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 
 
 
-@layer base {
-    body {
-        @apply font-[Roboto];
-    
-    
-    }
-}
+
 
 
 
@@ -23,6 +15,7 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto';
     
 }
 .header_shrink{

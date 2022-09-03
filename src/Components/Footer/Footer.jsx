@@ -8,11 +8,11 @@ import telegram from '../../Assets/Images/telegram-line.png'
 
 function Footer() {
   return (
-    <section className='container mt-52 pb-10'>
-      <div className='flex items-center justify-center mx-auto gap-20'>
-        <div className='flex w-full  lg:w-[963px] h-[150px] lg:h-[210px] items-center bg-transparent rounded-md border-BtnColor border-[1px]'>
+    <section className='container'>
+      <div className='d-flex align-items-center justify-content-center gap-20'>
+        <div className='d-flex  lg:w-[963px] h-[150px] lg:h-[210px] items-center bg-transparent rounded-md border-BtnColor border-[1px]'>
             <img src={discord}  className='ml-10 w-[100px] md:w-auto'  alt='discord'/>
-            <p className='text-center text-white text-[30px] lg:text-[72px]  lg:pl-[119px]'>Join Our  <span className='text-BtnColor'>Discord</span></p>
+            <p className='text-center'>Join Our  <span className='text-BtnColor'>Discord</span></p>
         </div>
         </div>
         <div className='flex items-center justify-center mx-auto  mt-12'>

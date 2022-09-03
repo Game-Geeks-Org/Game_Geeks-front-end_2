@@ -18,15 +18,23 @@
 }
 
 
-
-
-
 .nav__list{
     display: flex;
     align-items: center;
     column-gap: 2.7rem;
+    text-decoration: none;
+    list-style: none;
+    font-size: 30px;
 }
 
+
+.connect_btn{
+    line-height: normal !important;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 30px !important;
+}
 
 .nav-item a{
     text-decoration: none;
@@ -76,10 +84,6 @@
 
 }
 
-.btn:hover{
-    color: yellow !important;
-    transition: 0.3s ease !important; 
-}
 
 
 @media only screen and (max-width: 786px){
@@ -166,3 +170,6 @@
         font-size: 0.7rem !important;
     }   
 }
+
+
+
