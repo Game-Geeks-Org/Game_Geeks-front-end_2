@@ -10,7 +10,7 @@ import '../Styles/Dashboard.css'
 
 function DashBoard() {
   return (
-   <section className='container mt-52 pb-20'>
+   <section className='container mt-40 pb-20'>
       <div className='grid pt-20 grid-cols-1 md:grid-cols-2 lg:flex container justify-around items-center md:pt-40'>
         <div className=' text-white text-[25px] md:text-[30px] my-7 lg:text-[41px]'> <span className='text-BtnColor'>@</span>sanketnighot <br /> <span className='text-BtnColor'>tz1</span>LXRS2........dpPW <br /><span className='text-[#FCF4A5]'>Golden Clan</span></div>
         <div className='text-center'><img className=' w-full md:w-auto' src={gold}  alt='gold'/></div>

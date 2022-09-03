@@ -8,15 +8,12 @@ module.exports = {
       center: 'true',
       padding: '0.9rem',
     },
-    fontFamily: {
-      'sans': 'Righteous'
-    },
     extend: {
       colors: {
         'hoverColor': '#FE53BB',
         'BtnColor':'#C0013A',
         'BgColor':'#10061E',
-        'gameBackground': "rgba(201, 201, 201, 0.91) @ 100%"        
+        'gameBackground': 'rgba(201, 201, 201, 0.91) @ 100%'        
         
       },
 

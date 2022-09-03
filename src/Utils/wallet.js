@@ -3,12 +3,12 @@ import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 
 
-const preferredNetwork = "hangzhounet";
+const preferredNetwork = "ghostnet";
 const options = {
   name: "Game_Geeks", 
  preferredNetwork: preferredNetwork,
 };
-const rpcURL = "https://hangzhounet.smartpy.io";
+const rpcURL = "https://rpc.ghostnet.teztnets.xyz/";
 const wallet = new BeaconWallet(options);
 
 const getActiveAccount = async () => {

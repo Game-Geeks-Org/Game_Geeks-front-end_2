@@ -11,7 +11,7 @@ function NftStore() {
           {
             GAME__DATA.slice(0,8).map((item) =>{
               return(
-                <GameCards  item={item}/>
+                <GameCards  item={item} key={item.id} />
               )
 
             })

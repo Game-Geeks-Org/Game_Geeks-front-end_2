@@ -1,0 +1,65 @@
+.Game_banner{
+    background: url('../Assets/Images/bg1.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 50vh; 
+    overflow: hidden;
+    padding-top: 130px;
+}
+
+.pic{
+   
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-left: 107px;
+    margin-bottom: 500px;
+     position: absolute;
+ 
+
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+.space_header{
+    font-family: 'Righteous', cursive;
+}
+
+
+ hr{
+    background-color: #494949;
+    height: 1px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+
+.filter__right select{
+   width:134px;
+   height:49.89px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #FF1E1E;
+    outline: none;
+    border-radius: 8px;
+    background: transparent;
+    color: gray;
+
+}
+
+
+.filter_btn:hover{
+    background-color: #C0013A;
+    color: white;
+    box-shadow: 10px 10px 42px 0px rgba(255, 30, 30, 0.5);
+    ;
+}
+
+
+
+
+
+

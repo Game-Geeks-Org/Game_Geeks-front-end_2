@@ -95,7 +95,7 @@ const toggleMenu = () => menuRef.current.classList.toggle('active__menu')
                 <div className="nav-right align-items-center">
                     <button onClick={wallet ? handleDisconnectWallet : handleConnectWallet}  className='items-center text-white text-[20px] lg:text-[30px] tracking-[2px] cursor-pointer'>          
                                     
-                            💳{" "}
+                            
                         {wallet
                             ? wallet.slice(0, 4) +
                             "..." +

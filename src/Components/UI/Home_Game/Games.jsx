@@ -3,6 +3,9 @@ import image from '../../../Assets/Images/img1.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import Slider from 'react-slick';
+import { Link } from "react-router-dom";
+
+
 
 
 
@@ -63,7 +66,7 @@ function Games() {
         <div className='image-area'>
         <img  className='rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
             <div className='img-btn'>
-                <button className='text-white text-[20px] bg-[#C0013A9E] py-1 w-[202px] h-[61px] border-none'>Play</button>
+            <Link to="/spaceshooter"><button className='text-white text-[20px] bg-[#C0013A9E] py-1 w-[202px] h-[61px] border-none'>Play</button></Link>
             </div>
         </div>
           
@@ -72,7 +75,7 @@ function Games() {
         <div className='image-area'>
         <img  className='bg-transparent rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
             <div className='img-btn'>
-                <button className='text-white text-[20px] bg-[#C0013A9E] py-1 w-[202px] h-[61px] border-none'>Play</button>
+            <Link to="/spaceshooter"><button className='text-white text-[20px] bg-[#C0013A9E] py-1 w-[202px] h-[61px] border-none'>Play</button></Link>
             </div>
         </div>
           
@@ -81,7 +84,7 @@ function Games() {
         <div className='image-area'>
         <img  className='bg-transparent rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
             <div className='img-btn'>
-                <button className='text-white text-[20px] bg-[#C0013A9E] py-1 w-[202px] h-[61px] border-none'>Play</button>
+              <Link to="/spaceshooter"><button className='text-white text-[20px] bg-[#C0013A9E] py-1 w-[202px] h-[61px] border-none'>Play</button></Link>
             </div>
         </div>
           
@@ -90,7 +93,7 @@ function Games() {
         <div className='image-area'>
         <img  className='bg-transparent rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
             <div className='img-btn'>
-                <button className='text-white bg-[#C0013A9E] py-1 w-[202px] h-[61px] border-none'>Play</button>
+            <Link to="/spaceshooter"><button className='text-white text-[20px] bg-[#C0013A9E] py-1 w-[202px] h-[61px] border-none'>Play</button></Link>
             </div>
         </div>
           

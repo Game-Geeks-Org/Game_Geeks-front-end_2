@@ -1,5 +1,6 @@
 import React from 'react'
 import img1 from '../../Assets/Images/img1.png'
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
@@ -10,7 +11,7 @@ function HeroSection() {
         <p className=' text-[17px] md:text-[29px] mt-[23px] text-white tracking-[2px] my-7'>A Decentralized Gaming Hub built over Tezos <br/> Blockchain.</p>
       </div>
       <div className='my-10'>
-        <img  src={img1} alt='hero'/>
+      <Link to="/spaceshooter"> <img  src={img1} alt='hero'/> </Link>
       </div>
     </div>
     <div className='container text-left md:my-5 flex lg:mt-[60px] pb-6 gap-8'>
