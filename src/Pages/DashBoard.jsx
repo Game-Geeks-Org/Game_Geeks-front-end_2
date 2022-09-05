@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useEffect } from 'react'
 import gold from '../Assets/Images/geekyhead_gold 1.png'
 import cod from '../Assets/Images/COD.png'
 import image2 from '../Assets/Images/image2.png'
