@@ -5,7 +5,7 @@ import { BeaconWallet } from "@taquito/beacon-wallet";
 
 const preferredNetwork = "ghostnet";
 const options = {
-  name: "new app", 
+  name: "Game Geeks", 
  preferredNetwork: preferredNetwork,
 };
 const rpcURL = "https://rpc.ghostnet.teztnets.xyz/";

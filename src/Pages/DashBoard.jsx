@@ -7,9 +7,10 @@ import Header from '../Components/Header/Header'
 
 import '../Styles/Dashboard.css'
 import {  getActiveAccount } from '../Utils/wallet'
+import { Wallet } from '@taquito/taquito'
 
 function DashBoard() {
-  	const [dashBoard, setDashboard] = useState(null)
+  	const [dashBoardAddress, setDashboardAddress] = useState(null)
 	const [isActive, setIsActive] = useState(false)
 
 
@@ -31,7 +32,7 @@ function DashBoard() {
     const func = async () => {
       const account = await getActiveAccount();
       if (account) {
-        setDashboard(account.address);
+        setDashboardAddress(account.address);
       }
     };
     func();
@@ -44,7 +45,20 @@ return(
    
      
          <div className='d-flex justify-content-around wallet_dash'>
-           <div className='text-white mt-5 dash_title'> {(dashBoard) }
+           <div className='text-white mt-5 dash_title'> {
+            dashBoardAddress ? (
+              <div className='dash_address'>
+                   <span className=''>
+                              {`tz${dashBoardAddress.slice(
+                                    2,
+                                    10
+                                  )}...${dashBoardAddress.slice(
+                                    dashBoardAddress.length - 4,
+                                    dashBoardAddress.length
+                                  )}`}</span>
+              </div>
+            ):""
+           }
            <p className='gold'>Golden Clan</p></div>
            <div className='text-center'><img className=' w-full md:w-auto' src={gold}  alt='gold'/></div>
          </div>

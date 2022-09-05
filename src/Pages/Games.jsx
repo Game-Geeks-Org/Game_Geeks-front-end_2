@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import Header from '../Components/Header/Header'
 import '../Styles/Game.css'
 // import pic from '../Assets/Images/pic_1.png'
 // import menu from '../Assets/Images/filter-3-fill.png'
@@ -21,7 +22,11 @@ import '../Styles/Game.css'
 
 function Games() {
   return (
+    <>
+    <Header />
     <div className='text-white game_title'>Games</div>
+    </>
+    
   )
 }
 

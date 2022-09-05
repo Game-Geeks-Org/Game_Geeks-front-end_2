@@ -91,7 +91,7 @@ function Games() {
                           <Link to="/spaceshooter"><button className=''>Play</button></Link>
                     </div>
                   ):(
-                    <div className=''> connect wallet</div>
+                    <div className=''> connect wallet to play Game</div>
                   )}
             </div>
         </div>
