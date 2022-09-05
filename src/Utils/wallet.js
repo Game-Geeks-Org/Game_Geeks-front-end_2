@@ -28,7 +28,7 @@ const connectWallet = async () => {
 };
 
 const disconnectWallet = async () => {
-  await wallet.disconnect();
+  await wallet.clearActiveAccount();
   return { success: true, wallet: null };
 };
 

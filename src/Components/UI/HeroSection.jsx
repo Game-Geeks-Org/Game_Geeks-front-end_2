@@ -1,5 +1,5 @@
 import React from 'react'
-import img1 from '../../Assets/Images/img1.png'
+import img1 from '../../Assets/Images/LORD OF SPACE 01.png'
 import { Link } from "react-router-dom";
 import './HeroSection.css'
 import {Container, Row, Col}  from 'reactstrap'
@@ -15,7 +15,7 @@ function HeroSection() {
             <p className='desc'>A Decentralized Gaming Hub built over Tezos <br /> Blockchain. </p>
 
               <div className="hero__btn d-flex align-items-center gap-4">
-              <button className='hero-btn1 d-flex align-items-center gap-2'>Enter App</button>
+              <button className='hero-btn1 d-flex align-items-center gap-2'>Play Game</button>
               <button className='hero-btn2 d-flex align-items-center gap-2'>View Dashboard</button>
           </div>
               </div>

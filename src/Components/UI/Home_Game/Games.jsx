@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
-import image from '../../../Assets/Images/img1.png'
+import React, { useEffect, useState } from 'react'
+import image from '../../../Assets/Images/LORD OF SPACE 01.png'
+import image2 from '../../../Assets/Images/orbs collector coming soon.png'
+import image3 from '../../../Assets/Images/FOREST COMING SOON.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import Slider from 'react-slick';
 import { Link } from "react-router-dom";
-import { connectWallet } from '../../../Utils/wallet';
+import { connectWallet, getActiveAccount } from '../../../Utils/wallet';
+
 
 
 
@@ -14,13 +17,23 @@ import './Homegame.css'
 
 
 function Games() {
-  const [game, setGame] = useState(null)
+  const [game, setGame] = useState(false)
+  useEffect(() =>{
+    const interval = setInterval( async() =>{
+      const account = await getActiveAccount()
+
+      if(account){
+        setGame(true)
+      }else{
+        setGame(false)
+      }
+    },[])
+    return () => clearInterval(interval)
+  })
 
 
-  const handleGame  = () =>{
-    const {game} = connectWallet()
-    setGame(game)
-  }
+
+ 
 
     // AUTOPLAY SLIDER
     const settings = {
@@ -66,40 +79,38 @@ function Games() {
    <section className='container'>
     <div className='game_section'>
     <h2 className='game_title'>Play <span>Games</span> </h2>
-    <div className=''>
+    <div className=''> 
         <div className='App '>
         <Slider {...settings}>
     <div className='w-full'>
         <div className='image-area'>
         <img  className='slider_img' src={image}  alt='game'/>
             <div className='img-btn'>
-                {(game !=="") ? (
-            <Link to='/spaceshhoter'> <button> Play</button></Link>
-                   
-                ):(
-                
-                  <div className='text-white'>
-                    connect wallet
-                  </div>
-                ) }
+                  {(game) ? (
+                    <div className='text-white'>
+                          <Link to="/spaceshooter"><button className=''>Play</button></Link>
+                    </div>
+                  ):(
+                    <div className=''> connect wallet</div>
+                  )}
             </div>
         </div>
           
     </div>
     <div className='w-full'>
         <div className='image-area'>
-        <img  className='slider_img' src={image}  alt='game'/>
+        <img  className='slider_img' src={image2}  alt='game'/>
             <div className='img-btn'>
-            <Link to="/spaceshooter"><button className=''>Play</button></Link>
+            <Link to="#"><button className=''>Coming Soon</button></Link>
             </div>
         </div>
           
     </div>
     <div className='w-full'>
         <div className='image-area'>
-        <img  className='slider_img' src={image}  alt='game'/>
+        <img  className='slider_img' src={image3}  alt='game'/>
             <div className='img-btn'>
-              <Link to="/spaceshooter"><button className=''>Play</button></Link>
+              <Link to="#"><button className=''>Coming Soon</button></Link>
             </div>
         </div>
           
