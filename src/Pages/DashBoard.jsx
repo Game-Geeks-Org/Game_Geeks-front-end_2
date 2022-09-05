@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import gold from '../Assets/Images/geekyhead_gold 1.png'
 import cod from '../Assets/Images/COD.png'
 import image2 from '../Assets/Images/image2.png'
@@ -7,25 +7,29 @@ import {Container, Row, Col}  from 'reactstrap'
 import Header from '../Components/Header/Header'
 
 import '../Styles/Dashboard.css'
-import { connectWallet } from '../Utils/wallet'
-
-
-
-
-
-
+import { connectWallet, getActiveAccount } from '../Utils/wallet'
 
 function DashBoard() {
-  const [dashBoard, setDashboard] = useState(connectWallet)
- 
-return(
+  	// const [dashBoard, setDashboard] = useState(connectWallet)
+	const [isActive, setIsActive] = useState(false)
 
-  <p className='text-white'>{(dashBoard.connectWallet !== "")? (
-    <>
-   
-      <Header /> 
-      <section className='container dashboard'>
-       <div className='dash_content'>
+
+	useEffect( ()=> {
+		const interval = setInterval( async () => {
+			const account = await getActiveAccount();
+			if  (account) {
+				setIsActive(true)
+			} else {
+				setIsActive(false)
+			}
+			}, 2000);
+		return () => clearInterval(interval);
+	},[]);
+
+return(
+     isActive ? <> <Header /> 
+	<section className='container dashboard'>
+	<div className='dash_content'>
    
      
          <div className='d-flex justify-content-around wallet_dash'>
@@ -66,19 +70,11 @@ return(
         
          
         </aside>
-      </section>
-      </>
-      
-   
-  ):(
-    <div>
-      connect wallet
-    </div>
-  )}</p>
-
-
-
-
+	</section>
+	</> : <> <Header /> 
+	<section className='container dashboard'>
+	<div className='text-white mt-5 dash_title' style={{textAlign: 'center'}}>Connect Wallet to Access the Page </div>
+    </section></>
 
 )
   }
