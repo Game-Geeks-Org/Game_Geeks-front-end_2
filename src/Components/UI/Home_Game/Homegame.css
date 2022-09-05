@@ -1,17 +1,17 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap'); */
 
 
-.heading{
-    font-family: 'Righteous', cursive;
+.game_section{
+    margin-top: 200px;
 }
 
-
 .game_title{
-    font-size: 72px;
+    font-size: 72px !important;
     color: white;
     text-align: center;
     margin-bottom: 170px;
+
    
 }
 
@@ -119,6 +119,11 @@
         bottom: 10%;
         position: absolute
         
+    }
+
+
+    .game_title{
+        font-size: 40px !important;
     }
 
 }

@@ -2,16 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-
-
-
-
-
-
-
 body{
     background:black!important ;
-    font-family: 'Roboto' sans-serif;
+    font-family: 'Roboto' sa;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -20,7 +13,7 @@ body{
 }
 .header_shrink{
     background: black!important;
-    box-shadow: 3px 3px 6px -3px #fff;
+    box-shadow: black;
   
 }
 

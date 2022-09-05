@@ -5,50 +5,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 
-.heading{
-    font-family: 'Righteous', cursive;
+.live__team{
+    margin-top: 200px;
 }
 
 
 .team_name{
     text-align: center;
     color: white;
-    font-size: 51px;
+    font-size: 31px;
+    margin-top: 30px;
 }
 
 .team_name span{
     color: #C0013A;
-    ;
 }
-.team_role{
+
+
+.Team__title{
     text-align: center;
+    font-size: 72px;
     color: white;
-    font-size: 32px;
-    
+    font-family: 'Righteous', cursive;
+    margin-bottom: 100px;
+}
+.Team__title span{
+   color: #C0013A;
 }
 
-.live__team{
-    font-family: 'Righteous';
-    margin-top: 300px;
-}
 
-
-.team_img{
+.single__img img{
     border: 6px solid #C0013A;
     border-radius: 20px;
+    width: 100%;
+   
+}
+.team_wrapper{
+   text-align: center;
    
 }
 
 
 @media only screen and (max-width: 991px){
-    .team_img img{
-        width: 100%;
+    .Team__title{
+        font-size: 40px;
     }
 
     .team_name{
-        font-size: 30px;
+        font-size: 20px;
     }
-    .team_role{
-        font-size: 15px;
-    }
+    
 }

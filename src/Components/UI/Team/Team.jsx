@@ -8,31 +8,38 @@ function Team() {
   return (
   <section className='live__team'>
     <Container>
-      <Row>
        
-       {
-        TEAM_DATA.map((item) =>{
-          const {img, firstName, title, id, SecondName} = item
-          return(
-            <Col lg='4' md='6' sm='6'className='gap-3' >
-            <div key={id}>
-              <div className='team_img2'>
-              <img className='team_img' src={img} alt='' />
-              </div>
-              <p className='team_name'>{firstName} <span>{SecondName}</span></p>
-              <p className='team_role'>{title}</p>
-            </div>
-            </Col>
-          )
+      <Row>
+        <Col lg='12' className='mb-4'>
+          <h3 className='Team__title'>Our  <span>Team</span></h3>
 
-        })
-       }
+          </Col>
 
+          {
+            TEAM_DATA.map((item, index) =>{
+              const {firstName,  SecondName,  title, img} = item
+              return(
+                <Col lg='4' md='4' sm='6' key={index}>
+                  <div className='team_wrapper' >
+                    <div className='single__img'>
+                    <span><img src={img} width='250px'  alt=''/></span>
+                    </div>
+                    <div className='team_content'>
+                      <h3 className='team_name'>{firstName} <span>{SecondName}</span></h3>
+                      <p className='text-light'>{title}</p>
+
+                    </div>
+
+                  </div>
+                
+                </Col>
+              )
+
+            })
+          }
        
       </Row>
     </Container>
-
-
   </section>
   )
 }

@@ -27,8 +27,8 @@ const SS = () => {
                 className="unity"
                 unityProvider={unityProvider}
                 style={{
-                    width: "95%",
-                    aspectRatio: "16/9",
+                    width: "100%",
+                    aspectRatio: "16:9",
                     overflow: "hidden",
                 }}
             />

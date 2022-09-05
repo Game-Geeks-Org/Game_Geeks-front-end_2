@@ -3,17 +3,19 @@ import React from 'react'
 // import GameCards from '../Components/UI/GameCards/GameCards'
 
 import '../Styles/NFT_Store.css'
+import Header from '../Components/Header/Header'
 
 
 function NftStore() {
   return (
+    <>
+      <Header />
     <section className='container NFT__store pb-10'>
        <div>
         <h1 className='text-white'>NFT Store</h1>
        </div>
-     
-
     </section>
+    </>
   )
 }
 

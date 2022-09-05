@@ -1,0 +1,32 @@
+.footer{
+    margin-top: 200px;
+}
+
+
+
+.footer_wrapper{
+    border:  2px solid red;
+    padding-right: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.footer_wrapper p{
+    font-size: 30px;
+    margin: 20px;
+}
+
+
+.socials_wrapper{
+    border: 2px solid white;
+    padding: 2px 40px;
+    cursor: pointer;
+}
+
+.socials{
+    padding-bottom: 40px;
+}
+
+.socials img:hover{
+    opacity: 0.5;
+}

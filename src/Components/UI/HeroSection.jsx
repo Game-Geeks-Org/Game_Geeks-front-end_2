@@ -11,12 +11,12 @@ function HeroSection() {
       <Row>
         <Col lg='6' md='6'>
           <div className='hero__content'>
-            <h4 className='play'>PLAY TO <span className='win'>WIN</span></h4>
-            <p className='desc'>A Decentralized Gaming Hub built over Tezos Blockchain. </p>
+            <h4 className='hero__title'>PLAY TO <span className='win'>WIN</span></h4>
+            <p className='desc'>A Decentralized Gaming Hub built over Tezos <br /> Blockchain. </p>
 
               <div className="hero__btn d-flex align-items-center gap-4">
               <button className='hero-btn1 d-flex align-items-center gap-2'>Enter App</button>
-              <button className='hero-btn2 d-flex align-items-center gap-2'>Open Store</button>
+              <button className='hero-btn2 d-flex align-items-center gap-2'>View Dashboard</button>
           </div>
               </div>
         </Col>

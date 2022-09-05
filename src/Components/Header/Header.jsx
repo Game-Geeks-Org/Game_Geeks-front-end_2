@@ -7,6 +7,7 @@ import {
     getActiveAccount,
     disconnectWallet,
   } from "../../Utils/wallet";
+  import DashBoard from '../../Pages/DashBoard';
  
 
 import './Header.css'
@@ -33,14 +34,16 @@ const NAV__LINKS = [
    
 ]
 
-function Header() {
+export function Header() {
 
     const [wallet, setWallet] = useState(null);
+    const [showDisconnect, setShowDisconnect] = useState(false);
 
-    const handleConnectWallet = async () => {
+   const handleConnectWallet = async () => {
       const { wallet } = await connectWallet();
       setWallet(wallet);
     };
+     
     const handleDisconnectWallet = async () => {
       const { wallet } = await disconnectWallet();
       setWallet(wallet);
@@ -79,8 +82,8 @@ return()=>{}
 
 const toggleMenu = () => menuRef.current.classList.toggle('active__menu')
   return (
-    <header className='header'ref={headerRef}>
-            <div className="navigation container">
+    <header className='header pb-[100px]'ref={headerRef}>
+            <div className="navigation  container">
                <img src={logo}  alt='logo' width='100px' className='image'/>
                 <div className="nav__menu" ref ={menuRef} onClick={toggleMenu}>
                     <ul className="nav__list">
@@ -93,15 +96,41 @@ const toggleMenu = () => menuRef.current.classList.toggle('active__menu')
                 </div>
               
                 <div className="nav-right">
-                    <button onClick={wallet ? handleDisconnectWallet : handleConnectWallet}  className='connect_btn'>          
-                                    
-                            
-                        {wallet
-                            ? wallet.slice(0, 4) +
-                            "..." +
-                             wallet.slice(wallet.length - 4, wallet.length)
-                            : "Connect wallet"}</button>
+                  {
+                    wallet ? (
+                      <div className='wrapper' 
+                         onMouseEnter={() => setShowDisconnect(true)}
+                          onMouseLeave={() => setShowDisconnect(false)} >
+
+                            <div className='wallet_address_wrapper'>
+                              <span className=''>
+                              {`tz${wallet.slice(
+                                    2,
+                                    5
+                                  )}...${wallet.slice(
+                                    wallet.length - 4,
+                                    wallet.length
+                                  )}`}</span>
+                            </div>
+                            {
+                              showDisconnect && (
+                                <div className='disconnect_wrapper'>
+                                <span className='disconnect' onClick={handleDisconnectWallet}>Disconnect</span>
+                                </div>
+                              )
+                            }
+
+                      </div>
+
+                    ):(
+                      <button className='connect_btn' onClick={handleConnectWallet}>
+                        connect wallet
+                      </button>
+                    )
+                  }
+
             </div>
+
             <div className="">
                          {/* MOBILE MENU */}
                          <span className='mobile_menu'><i className="ri-menu-2-line" onClick={toggleMenu}></i></span>
@@ -112,4 +141,9 @@ const toggleMenu = () => menuRef.current.classList.toggle('active__menu')
   )
 }
 
-export default Header
+
+export default  Header
+
+
+
+

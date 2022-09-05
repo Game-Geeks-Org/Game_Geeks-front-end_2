@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css"
 import Slider from 'react-slick';
 
 import image from '../../../Assets/Images/img1.png'
-import '../../../Styles/HomeStore.css'
+import './HomeStore.css'
 
 function HomeStore() {
  // AUTOPLAY SLIDER
@@ -49,75 +49,82 @@ function HomeStore() {
   };
 
   return (
-    <section className='container home_store'>
-    <div className='pb-[150px] '>
-    <h2 className=' store_title heading'>Buy From <span>Store</span> </h2>
-    </div>
-    <div className='grid grid-cols-1 gap-9 md:grid-cols-2 lg:flex mx-9'>
+    <section className='container'>
+    <div className='home_store'>
+    <h2 className='store_title'>Buy From <span>Store</span> </h2>
         <div className='App overflow-hidden'>
         <Slider {...settings}>
-            <div className='w-full'>
+            <div className='slider_wrapper'>
         <div className='image-area'>
-        <img  className='bg-transparent rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
-            <div className='img-btn flex gap-10 items-center justify-center'>
-                <button className='text-white bg-[#C0013A9E] text-center ml-5 w-20 h-[50px] px-4 lg:w-[100px] lg:h-[61px] border-none'>Buy</button>
-                <button className='text-white bg-[#C0013A9E]  text-center mr-5 w-20 h-[50px] px-4 lg:w-[100px] lg:h-[61px] border-none'>Bid</button>
+        <img  className='slider_img' src={image}  alt='game'/>
+            <div className='img-btn2'>
+                <button className='text-white hover_btn1'>Buy</button>
+                <button className='text-white hover_btn2'>Bid</button>
             </div>
         </div>
-        <div className='d-flex justify-content-between'>
-                <div className='tex-[23px] text-white'>tz1d4...2ews</div>
-                <div className='tex-[23px] text-white'> 500 ꜩ</div>
+        <div className='d-flex justify-content-between price_wrapper'>
+                <div className='text-white'>tz1d4...2ews</div>
+                <div className='text-white'> 500 ꜩ</div>
         </div>
         </div>
-        <div className='w-full'>
+            <div className='slider_wrapper'>
         <div className='image-area'>
-        <img  className='bg-transparent rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
-            <div className='img-btn flex gap-10 items-center justify-center'>
-            <button className='text-white bg-[#C0013A9E] text-center ml-5 w-20 h-[50px] px-4 lg:w-[100px] lg:h-[61px] border-none'>Buy</button>
-            <button className='text-white bg-[#C0013A9E]  text-center mr-5 w-20 h-[50px] px-4 lg:w-[100px] lg:h-[61px] border-none'>Bid</button>
+        <img  className='slider_img' src={image}  alt='game'/>
+            <div className='img-btn2'>
+                <button className='text-white hover_btn1'>Buy</button>
+                <button className='text-white hover_btn2'>Bid</button>
             </div>
         </div>
-        <div className='d-flex justify-content-between'>
-                <div className='tex-[23px] text-white'>tz1d4...2ews</div>
-                <div className='tex-[23px] text-white'> 500 ꜩ</div>
+        <div className='d-flex justify-content-between price_wrapper'>
+                <div className='text-white'>tz1d4...2ews</div>
+                <div className='text-white'> 500 ꜩ</div>
         </div>
         </div>
-        <div className='w-full'>
+            <div className='slider_wrapper'>
         <div className='image-area'>
-        <img  className='bg-transparent rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
-            <div className='img-btn flex gap-10 items-center justify-center'>
-            <button className='text-white bg-[#C0013A9E] text-center ml-5 w-20 h-[50px] px-4 lg:w-[100px] lg:h-[61px] border-none'>Buy</button>
-            <button className='text-white bg-[#C0013A9E]  text-center mr-5 w-20 h-[50px] px-4 lg:w-[100px] lg:h-[61px] border-none'>Bid</button>
+        <img  className='slider_img' src={image}  alt='game'/>
+            <div className='img-btn2'>
+                <button className='text-white hover_btn1'>Buy</button>
+                <button className='text-white hover_btn2'>Bid</button>
             </div>
         </div>
-        <div className='d-flex justify-content-between'>
-                <div className='tex-[23px] text-white'>tz1d4...2ews</div>
-                <div className='tex-[23px] text-white'> 500 ꜩ</div>
+        <div className='d-flex justify-content-between price_wrapper'>
+                <div className='text-white'>tz1d4...2ews</div>
+                <div className='text-white'> 500 ꜩ</div>
         </div>
         </div>
-        <div className='w-full'>
+            <div className='slider_wrapper'>
         <div className='image-area'>
-        <img  className='bg-transparent rounded-md border-BtnColor border-[6px] slider_img' src={image}  alt='game'/>
-            <div className='img-btn flex gap-10 items-center justify-center'>
-            <button className='text-center ml-5  border-none'>Buy</button>
-            <button className='text-white text-center'>Bid</button>
+        <img  className='slider_img' src={image}  alt='game'/>
+            <div className='img-btn2'>
+                <button className='text-white hover_btn1'>Buy</button>
+                <button className='text-white hover_btn2'>Bid</button>
             </div>
         </div>
-        <div className='d-flex justify-content-between'>
-                <div className='tex-[23px] text-white'>tz1d4...2ews</div>
-                <div className='tex-[23px] text-white'> 500 ꜩ</div>
+        <div className='d-flex justify-content-between price_wrapper'>
+                <div className='text-white'>tz1d4...2ews</div>
+                <div className='text-white'> 500 ꜩ</div>
         </div>
         </div>
-       
-
-            </Slider>
-
+            <div className='slider_wrapper'>
+        <div className='image-area'>
+        <img  className='slider_img' src={image}  alt='game'/>
+            <div className='img-btn2'>
+                <button className='text-white hover_btn1'>Buy</button>
+                <button className='text-white hover_btn2'>Bid</button>
+            </div>
         </div>
-        
+        <div className='d-flex justify-content-between price_wrapper'>
+                <div className='text-white'>tz1d4...2ews</div>
+                <div className='text-white'> 500 ꜩ</div>
+        </div>
+        </div>
+            </Slider> 
     </div>
 <div className='text-center mt-[54px]'>
 <button className='view_btn'>View all</button>
 </div>
+    </div>
    </section>
   )
 }

@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import image from '../../../Assets/Images/img1.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import Slider from 'react-slick';
 import { Link } from "react-router-dom";
+import { connectWallet } from '../../../Utils/wallet';
 
 
 
@@ -13,6 +14,13 @@ import './Homegame.css'
 
 
 function Games() {
+  const [game, setGame] = useState(null)
+
+
+  const handleGame  = () =>{
+    const {game} = connectWallet()
+    setGame(game)
+  }
 
     // AUTOPLAY SLIDER
     const settings = {
@@ -55,10 +63,9 @@ function Games() {
 
 
   return (
-   <section className='container mt-52'>
-    <div className='pb-[150px] overflow-hidden'>
-    <h2 className='game_title heading'>Play <span>Games</span> </h2>
-    </div>
+   <section className='container'>
+    <div className='game_section'>
+    <h2 className='game_title'>Play <span>Games</span> </h2>
     <div className=''>
         <div className='App '>
         <Slider {...settings}>
@@ -66,7 +73,15 @@ function Games() {
         <div className='image-area'>
         <img  className='slider_img' src={image}  alt='game'/>
             <div className='img-btn'>
-            <Link to="/spaceshooter"><button className=''>Play</button></Link>
+                {(game !=="") ? (
+            <Link to='/spaceshhoter'> <button> Play</button></Link>
+                   
+                ):(
+                
+                  <div className='text-white'>
+                    connect wallet
+                  </div>
+                ) }
             </div>
         </div>
           
@@ -106,6 +121,9 @@ function Games() {
 <div className='text-center'>
 <button className='view_btn'>View all</button>
 </div>
+
+    </div>
+    
    </section>
   )
 }
