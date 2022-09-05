@@ -6,14 +6,26 @@
 
 .footer_wrapper{
     border:  2px solid red;
-    padding-right: 30px;
+    padding-right: 40px;
     color: white;
     cursor: pointer;
+}
+
+
+.footer_wrapper img{
+    margin: 20px;
 }
 
 .footer_wrapper p{
     font-size: 30px;
     margin: 20px;
+    text-decoration: none;
+}
+
+
+.footer_wrapper, a{
+    text-decoration: none !important;
+
 }
 
 
@@ -29,4 +41,22 @@
 
 .socials img:hover{
     opacity: 0.5;
+}
+
+
+@media only screen and (max-width: 576px){
+    .footer_wrapper{
+        padding-right: 30px;
+    
+    }
+
+    .footer_wrapper p{
+        font-size: 17px;
+    }
+    
+    .socials_wrapper{
+        border: 2px solid white;
+        padding: 2px 20px;
+        cursor: pointer;
+    }
 }
