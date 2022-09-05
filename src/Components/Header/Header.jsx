@@ -7,7 +7,7 @@ import {
     getActiveAccount,
     disconnectWallet,
   } from "../../Utils/wallet";
-  import DashBoard from '../../Pages/DashBoard';
+
  
 
 import './Header.css'
