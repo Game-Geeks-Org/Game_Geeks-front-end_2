@@ -7,7 +7,7 @@ import Header from '../Components/Header/Header'
 
 import '../Styles/Dashboard.css'
 import {  getActiveAccount } from '../Utils/wallet'
-import { Wallet } from '@taquito/taquito'
+// import { Wallet } from '@taquito/taquito'
 
 function DashBoard() {
   	const [dashBoardAddress, setDashboardAddress] = useState(null)
