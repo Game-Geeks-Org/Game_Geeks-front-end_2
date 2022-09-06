@@ -57,19 +57,21 @@
 }
 
 
-.disconnect_wrapper{
-    color: white;
-    padding: 0;
+.disconnect_wrapper .disconnect{
     cursor: pointer;
     position:  absolute;
     margin-left: 20px;
-
+    border-radius: 20px;
 
 }
 
-.disconnect_wrapper span{
+.disconnect_wrapper, span i{
     margin-bottom: 100px;
+    font: bold;
+    margin: auto 10px;
+    color: #fff;
 }
+
 
 
 

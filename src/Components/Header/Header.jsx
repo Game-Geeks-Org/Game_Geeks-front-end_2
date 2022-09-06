@@ -115,7 +115,7 @@ const toggleMenu = () => menuRef.current.classList.toggle('active__menu')
                             {
                               showDisconnect && (
                                 <div className='disconnect_wrapper'>
-                                <span className='disconnect' onClick={handleDisconnectWallet}>Disconnect</span>
+                                <span className='disconnect' onClick={handleDisconnectWallet}>Disconnect<i class="ri-edit-circle-line"></i></span>
                                 </div>
                               )
                             }

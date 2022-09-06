@@ -1,9 +1,27 @@
-import React from "react";
+import React,{useCallback, useEffect, useState} from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
 
 
 const SS = () => {
+    const [isGameOver, setIsGameOver] = useState(false);
+//   const [userName, setUserName] = useState(null);
+  const [score, setScore] = useState(true);
+
+  const handleGameOver = useCallback(( score) => {
+    setIsGameOver(true);
+    setScore(score);
+  }, []);
+
+
+  useEffect(() => {
+    addEventListener("GameOver", handleGameOver);
+    return () => {
+      removeEventListener("GameOver", handleGameOver);
+    };
+  }, [handleGameOver]);
+
+
     const {
         unityProvider,
         isLoaded,
@@ -32,9 +50,14 @@ const SS = () => {
                     overflow: "hidden",
                 }}
             />
+            {isGameOver === true && (
+            console.log(` You've scored ${score} points.`)
+      )}
         </div>
     );
 };
 
 
 export default SS;
+
+
