@@ -3,8 +3,8 @@ import './footer.css'
 
 import discord from '../../Assets/Images/discord 1.png'
 import twitter from '../../Assets/Images/twitter-line (1).png'
-import instagram from '../../Assets/Images/instagram-line (1).png'
-import linkedIn from '../../Assets/Images/linkedin-box-line.png'
+import instagram from '../../Assets/Images/linkedin-box-line.png'
+import linkedIn from '../../Assets/Images/instagram-line.png'
 import telegram from '../../Assets/Images/telegram-line.png'
 
 function Footer() {

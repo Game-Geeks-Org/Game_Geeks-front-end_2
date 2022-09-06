@@ -1,9 +1,13 @@
 import React,{useCallback, useEffect, useState} from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
+import '../Styles/spaceShooter.css'
+import Modal from "../Components/UI/Modal/Modal";
+
 
 
 
 const SS = () => {
+    const [modal, setShowModal] = useState(false)
     const [isGameOver, setIsGameOver] = useState(false);
 //   const [userName, setUserName] = useState(null);
   const [score, setScore] = useState(true);
@@ -11,7 +15,7 @@ const SS = () => {
   const handleGameOver = useCallback(( score) => {
     setIsGameOver(true);
     setScore(score);
-  }, []);
+  }, [score]);
 
 
   useEffect(() => {
@@ -40,7 +44,11 @@ const SS = () => {
   
 
     return (
+      <> 
+      <button className="text-white mt-5 game_modal_btn" onClick={() => setShowModal(true)}>GAME MODAL</button>
+      {modal && <Modal setShowModal={setShowModal} />}
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+         
             <Unity
                 className="unity"
                 unityProvider={unityProvider}
@@ -51,9 +59,12 @@ const SS = () => {
                 }}
             />
             {isGameOver === true && (
-            console.log(` You've scored ${score} points.`)
+                console.log(`Game Over! You've scored ${score} points.`)
       )}
+    
         </div>
+        </>
+
     );
 };
 
