@@ -1,166 +1,148 @@
-.hero__section{
-    margin-top: 100px;
-    font-family: 'roboto';
-    margin-bottom: 200px;
+.hero__section {
+  margin-top: 100px;
+  font-family: "roboto";
+  margin-bottom: 200px;
 }
 
-.hero__content{
-line-height: 55px;
-margin-top: 120px;
+.hero__content {
+  line-height: 55px;
+  margin-top: 120px;
 }
 
-
-.hero__btn{
-    margin-top:50px;
+.hero__btn {
+  margin-top: 50px;
 }
 
-
-.hero__title{
-    font-size: 72px;
-    color: #fff;
+.hero__title {
+  font-size: 72px;
+  color: #fff;
 }
 
-.hero__title span{
-    color: #C0013A;
+.hero__title span {
+  color: #c0013a;
 }
 
-.desc{
-    font-size: 20px;
-    color: white;
-    letter-spacing: 2px;
+.desc {
+  font-size: 20px;
+  color: white;
+  letter-spacing: 2px;
 }
-
 
 .hero-btn1 {
-    padding: 7px 70px;
-    border-radius: 4px;
-    background: #C0013AE8;
-    text-align: center;
-    border: none;
-    color: white;
-    font-size: 20px;
+  padding: 7px 70px;
+  border-radius: 4px;
+  background: #c0013ae8;
+  text-align: center;
+  border: none;
+  color: white;
+  font-size: 20px;
 }
 
-
-
-
-
-
-.hero-btn1:hover{
+.hero-btn1:hover {
   background: transparent;
-  border: 1px solid #C0013AE8 ;
-    color: white;
+  border: 1px solid #c0013ae8;
+  color: white;
 }
 
-
-.hero-btn1:hover a{
-    color: white;
+.hero-btn1:hover a {
+  color: white;
 }
 
-.hero-btn1 .hero-btn2{
-    color: white;
-    padding: 5px;
+.hero-btn1 .hero-btn2 {
+  color: white;
+  padding: 5px;
 }
 
-.hero-btn2{
-    background: transparent;
-    border: 1px solid #C0013AE8 ;
-    color: white;
-    padding: 7px 45px;
-    border-radius: 4px;
-    font-size: 20px;
+.hero-btn2 {
+  background: transparent;
+  border: 1px solid #c0013ae8;
+  color: white;
+  padding: 7px 45px;
+  border-radius: 4px;
+  font-size: 20px;
 }
 
-
-.hero-btn2 a{
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    line-height: 30px;
+.hero-btn2 a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 30px;
 }
 
-.hero-btn2:hover{
-    background: #C0013AE8;
+.hero-btn2:hover {
+  background: #c0013ae8;
 }
- .hero-btn2:hover a{
-    color: #fff;
- }
+.hero-btn2:hover a {
+  color: #fff;
+}
 
+.hero-img {
+  margin-left: auto;
+  margin-top: 100px;
+  width: 100%;
+}
 
- .hero-img{
-    margin-left: auto;
-    margin-top: 100px;
-    width: 100%;
- }
+.hero-img img {
+  border-radius: 2rem;
+}
 
- .hero-img img{
-    border-radius: 2rem;
- }
-
- 
-
-
- @media only screen and (max-width: 576px){
-.hero-img img{
+@media only screen and (max-width: 576px) {
+  .hero-img img {
     width: 100%;
     margin: auto;
     margin-top: 50px;
+  }
+
+  .hero-btn1 {
+    padding: 7px 30px;
+  }
+
+  .hero-btn2 {
+    padding: 7px 30px;
+  }
+
+  .hero__section {
+    margin-top: 5 0px;
+  }
 }
 
-
-.hero-btn1{
-    padding: 7px 30px; 
+@media only screen and (max-width: 745px) {
+  .hero-img img {
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+  }
 }
 
-.hero-btn2{
-    padding: 7px 30px; 
+@media only screen and (max-width: 1110px) {
+  .hero-img img {
+    width: 100%;
+    margin-top: 90px;
+  }
+
+  .hero__content {
+    font-size: 1.5rem;
+    line-height: 40px;
+  }
+
+  .hero__content p {
+    font-size: 0.8rem;
+    line-height: 25px;
+  }
+
+  .hero__btn {
+    margin-top: 130px;
+    align-items: center;
+  }
 }
 
-.hero__section{
-    margin-top: 5 0px;}
- }
-
-
-
- @media only screen and (max-width: 745px){
-   .hero-img img{
-        width: 100%;
-        margin: auto;
-        margin-top: 40px;
-    }
- }
-
-
- @media only screen and (max-width: 1110px){
-    .hero-img img{
-        width: 100%;
-        margin-top: 90px;
-    }
-
-    .hero__content{
-        font-size: 1.5rem;
-        line-height: 40px;
-    }
-
-    .hero__content p{
-        font-size: 0.8rem ;
-        line-height: 25px;
-    }
-
-    .hero__btn {
-        margin-top: 130px;
-        align-items: center;
-    }
- }
-
-
- @media only screen and (max-width: 820px){
-    .hero__title{
+@media only screen and (max-width: 820px) {
+  .hero__title {
     font-size: 40px;
-    }
+  }
 
-    .hero__btn button{
-        font-size: 20px;
-        padding: 7px 20px; 
-    }
- }
+  .hero__btn button {
+    font-size: 20px;
+    padding: 7px 20px;
+  }
+}

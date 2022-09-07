@@ -3,10 +3,11 @@ import logo from '../../Assets/Images/logo.png'
 import close from '../../Assets/Images/close-line (2).png'
 
 import {
-    connectWallet,
-    getActiveAccount,
-    disconnectWallet,
-  } from "../../Utils/wallet";
+  connectWallet,
+  getActiveAccount,
+  disconnectWallet,
+} from "../../Utils/wallet";
+
 
   import './Header.css'
 
@@ -18,50 +19,43 @@ const Navbar = () => {
   const [wallet, setWallet] = useState(null);
     const [showDisconnect, setShowDisconnect] = useState(false);
 
-   const handleConnectWallet = async () => {
-      const { wallet } = await connectWallet();
-      setWallet(wallet);
+  const handleConnectWallet = async () => {
+    const { wallet } = await connectWallet();
+    setWallet(wallet);
+  };
+
+  const handleDisconnectWallet = async () => {
+    const { wallet } = await disconnectWallet();
+    setWallet(wallet);
+  };
+
+  useEffect(() => {
+    const func = async () => {
+      const account = await getActiveAccount();
+      if (account) {
+        setWallet(account.address);
+      }
     };
-     
-    const handleDisconnectWallet = async () => {
-      const { wallet } = await disconnectWallet();
-      setWallet(wallet);
-    };
-  
-    useEffect(() => {
-      const func = async () => {
-        const account = await getActiveAccount();
-        if (account) {
-          setWallet(account.address);
-        }
-      };
-      func();
-    }, []);
+    func();
+  }, []);
 
 
 
-const NAV__LINKS = [
-    {
-        display: 'Home',
-        url: '/home' 
-    },
 
-    {
-        display: 'Dashboard',
-        url: '/dashboard' 
-    },
-    {
-        display: 'NFT Store',
-        url: '/nftstore' 
-    },
-  
-    {
-        display: 'Games',
-        url: '/games' 
-    },
-   
-]
+  const headerRef = useRef(null)
 
+  const menuRef = useRef(null)
+
+  // useEffect(() => {
+  //   window.addEventListener('scroll', () => {
+  //     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+  //       headerRef.current.classList.add('header_shrink')
+  //     } else {
+  //       headerRef.current.classList.remove('header_shrink')
+  //     }
+  //   })
+  //   return () => { }
+  // }, [])
 
   const [Mobile, setMobile] = useState(false)
   return (
@@ -82,25 +76,14 @@ const NAV__LINKS = [
                          onMouseEnter={() => setShowDisconnect(true)}
                           onMouseLeave={() => setShowDisconnect(false)} >
 
-                            <div className='wallet_address_wrapper'>
-                              <span className=''>
-                              {`tz${wallet.slice(
-                                    2,
-                                    5
-                                  )}...${wallet.slice(
-                                    wallet.length - 4,
-                                    wallet.length
-                                  )}`}</span>
-                            </div>
-                            {
-                              showDisconnect && (
-                                <div className='disconnect_wrapper'>
-                                <span className='disconnect' onClick={handleDisconnectWallet}>Disconnect<i class="ri-edit-circle-line"></i></span>
-                                </div>
-                              )
-                            }
+              </div>
 
-                      </div>
+            ) : (
+              <button className='connect_btn' onClick={handleConnectWallet}>
+                connect wallet
+              </button>
+            )
+          }
 
                     ):(
                       <button className='connect_btn text-white' onClick={handleConnectWallet}>

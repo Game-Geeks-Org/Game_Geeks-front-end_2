@@ -18,61 +18,61 @@ import './Homegame.css'
 
 function Games() {
   const [game, setGame] = useState(false)
-  useEffect(() =>{
-    const interval = setInterval( async() =>{
+  useEffect(() => {
+    const interval = setInterval(async () => {
       const account = await getActiveAccount()
 
-      if(account){
+      if (account) {
         setGame(true)
-      }else{
+      } else {
         setGame(false)
       }
-    },[])
+    }, [])
     return () => clearInterval(interval)
   })
 
 
 
- 
 
-    // AUTOPLAY SLIDER
-    const settings = {
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 7000,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        initialSlide: 0,
-        
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      };
+
+  // AUTOPLAY SLIDER
+  const settings = {
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    initialSlide: 0,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
 
   return (
@@ -140,11 +140,11 @@ function Games() {
     </div>
 <div className='text-center'>
 <button className='view_btn'>View all</button>
-</div>
+</div> */}
 
-    </div>
-    
-   </section>
+      </div>
+
+    </section>
   )
 }
 
