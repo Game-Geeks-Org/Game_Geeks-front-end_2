@@ -40,11 +40,7 @@ const Navbar = () => {
 
 
 
-const NAV__LINKS = [
-    {
-        display: 'Home',
-        url: '/home' 
-    },
+
 const NAV__LINKS = [
     {
         display: 'Home',
@@ -107,7 +103,7 @@ const NAV__LINKS = [
 
                       </div>
 
-                      </div>
+                    
 
                     ):(
                       <button className='connect_btn text-white' onClick={handleConnectWallet}>
