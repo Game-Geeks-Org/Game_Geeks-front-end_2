@@ -15,8 +15,8 @@ function HeroSection() {
             <p className='desc'>A Decentralized Gaming Hub built over Tezos <br /> Blockchain. </p>
 
               <div className="hero__btn d-flex align-items-center gap-4">
-              <button className='hero-btn1 d-flex align-items-center gap-2'>Play Game</button>
-              <button className='hero-btn2 d-flex align-items-center gap-2'>View Dashboard</button>
+              <Link to='/spaceshooter'><button className='hero-btn1 d-flex align-items-center gap-2'>Play Game</button></Link>
+             <Link to='/dashboard'> <button className='hero-btn2 d-flex align-items-center gap-2'>View Dashboard </button></Link>
           </div>
               </div>
         </Col>

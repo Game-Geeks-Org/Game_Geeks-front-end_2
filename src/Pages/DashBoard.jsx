@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import gold from '../Assets/Images/geekyhead_gold 1.png'
-import cod from '../Assets/Images/COD.png'
-import image2 from '../Assets/Images/image2.png'
-import image3 from '../Assets/Images/Image3.png'
+import cod from '../Assets/Images/LORD OF SPACE 022.png'
+import image2 from '../Assets/Images/ORBS COLLECTOR 022.png'
+import image3 from '../Assets/Images/FOREST TOP DOWN 022.png'
 import Header from '../Components/Header/Header'
 
 import '../Styles/Dashboard.css'
@@ -82,13 +82,13 @@ return(
          </div>
          <div className='cod_img'>
            <div className='mb-3 rounded-5'>
-           <img src={cod} className='rounded-5' alt='cod'/>
+           <img src={cod} className='rounded-5' width='400px' alt='cod'/>
              </div>
            <div className='mb-3'>
-           <img src={image2} className='rounded-5' alt='cod'/>
+           <img src={image2} className='rounded-5' width='400px' alt='cod'/>
              </div>
            <div className='mb-3'>
-           <img src={image3} className='rounded-5' alt='cod'/>
+           <img src={image3} className='rounded-5' width='400px' alt='cod'/>
              </div>
          </div>
          </div>

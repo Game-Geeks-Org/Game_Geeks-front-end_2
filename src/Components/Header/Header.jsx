@@ -1,42 +1,21 @@
-
-
-import { useRef, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import logo from '../../Assets/Images/logo.png'
+import close from '../../Assets/Images/close-line (2).png'
+
 import {
     connectWallet,
     getActiveAccount,
     disconnectWallet,
   } from "../../Utils/wallet";
 
- 
+  import './Header.css'
 
-import './Header.css'
-import {NavLink,} from 'react-router-dom'
-const NAV__LINKS = [
-    {
-        display: 'Home',
-        url: '/home' 
-    },
+  import {NavLink,} from 'react-router-dom'
 
-    {
-        display: 'Dashboard',
-        url: '/dashboard' 
-    },
-    {
-        display: 'NFT Store',
-        url: '/nftstore' 
-    },
-  
-    {
-        display: 'Games',
-        url: '/games' 
-    },
-   
-]
 
-export function Header() {
+const Navbar = () => {
 
-    const [wallet, setWallet] = useState(null);
+  const [wallet, setWallet] = useState(null);
     const [showDisconnect, setShowDisconnect] = useState(false);
 
    const handleConnectWallet = async () => {
@@ -61,41 +40,43 @@ export function Header() {
 
 
 
-const headerRef = useRef(null)
+const NAV__LINKS = [
+    {
+        display: 'Home',
+        url: '/home' 
+    },
 
-const menuRef = useRef(null)
+    {
+        display: 'Dashboard',
+        url: '/dashboard' 
+    },
+    {
+        display: 'NFT Store',
+        url: '/nftstore' 
+    },
+  
+    {
+        display: 'Games',
+        url: '/games' 
+    },
+   
+]
 
-// useEffect(() => {
-// window.addEventListener('scroll',() => {
-//     if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
-//         headerRef.current.classList.add('header_shrink')
-//     }else{
-//         headerRef.current.classList.remove('header_shrink')
-//     }
-// })
-// return()=>{} 
 
-
-
-// },[])
-
-const toggleMenu = () => menuRef.current.classList.toggle('active__menu')
+  const [Mobile, setMobile] = useState(false)
   return (
-    <header className='header pb-[100px]'ref={headerRef}>
-            <div className="navigation  container">
-               <img src={logo}  alt='logo' width='100px' className='image'/>
-                <div className="nav__menu" ref ={menuRef} onClick={toggleMenu}>
-                    <ul className="nav__list">
-                        { NAV__LINKS.map((item,index) =>(
-                                    <li className="nav-item text-[17px] lg:text-[30px] font-[500] tracking-[2px]" key={index}>
+    <>
+      <nav className='navbar'>
+       <div>
+       <img src={logo} width='100px' alt="" />
+        </div> 
+                   <ul className={Mobile ? "nav-links-mobile" : "nav-links"} onClick={() => setMobile(false)}>
+                           { NAV__LINKS.map((item,index) =>(
+                                    <li className="nav-item" key={index}>
                                     <NavLink to={item.url} className={navClass => navClass.isActive ? 'active': ""}>{item.display}</NavLink>
                                 </li>
                              ))}
-                    </ul>
-                </div>
-              
-                <div className="nav-right">
-                  {
+                             {
                     wallet ? (
                       <div className='wrapper' 
                          onMouseEnter={() => setShowDisconnect(true)}
@@ -122,27 +103,20 @@ const toggleMenu = () => menuRef.current.classList.toggle('active__menu')
                       </div>
 
                     ):(
-                      <button className='connect_btn' onClick={handleConnectWallet}>
+                      <button className='connect_btn text-white' onClick={handleConnectWallet}>
                         connect wallet
                       </button>
                     )
                   }
 
-            </div>
+           
 
-            <div className="">
-                         {/* MOBILE MENU */}
-                         <span className='mobile_menu'><i className="ri-menu-2-line" onClick={toggleMenu}></i></span>
-                         
-                </div>
-            </div>
-    </header>
+       </ul>
+        <button className='mobile-menu-icon' onClick={() => setMobile(!Mobile)}>
+        {Mobile ? <img src={close} alt='close' /> : <i className="ri-menu-2-line"></i>}
+        </button>
+      </nav>
+    </>
   )
 }
-
-
-export default  Header
-
-
-
-
+export default Navbar
