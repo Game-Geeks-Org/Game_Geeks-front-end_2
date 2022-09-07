@@ -1,0 +1,11 @@
+.game_modal_btn{
+    background: #C0013A;
+    padding: 7px;
+    border-radius: 17px;
+    position: fixed;
+    z-index: 2;
+    position: absolute;
+    outline: none;
+    margin: auto;
+    margin-left: 30px;
+}

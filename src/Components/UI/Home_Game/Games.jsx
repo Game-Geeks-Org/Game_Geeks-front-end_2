@@ -6,7 +6,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import Slider from 'react-slick';
 import { Link } from "react-router-dom";
-import { connectWallet, getActiveAccount } from '../../../Utils/wallet';
+import { getActiveAccount } from '../../../Utils/wallet';
+
 
 
 
