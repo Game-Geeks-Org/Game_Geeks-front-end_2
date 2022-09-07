@@ -3,10 +3,10 @@ import logo from '../../Assets/Images/logo.png'
 import close from '../../Assets/Images/close-line (2).png'
 
 import {
-    connectWallet,
-    getActiveAccount,
-    disconnectWallet,
-  } from "../../Utils/wallet";
+      connectWallet,
+      getActiveAccount,
+      disconnectWallet,
+    } from "../../Utils/wallet";
 
   import './Header.css'
 
@@ -18,28 +18,33 @@ const Navbar = () => {
   const [wallet, setWallet] = useState(null);
     const [showDisconnect, setShowDisconnect] = useState(false);
 
-   const handleConnectWallet = async () => {
-      const { wallet } = await connectWallet();
-      setWallet(wallet);
-    };
-     
-    const handleDisconnectWallet = async () => {
-      const { wallet } = await disconnectWallet();
-      setWallet(wallet);
-    };
-  
-    useEffect(() => {
-      const func = async () => {
-        const account = await getActiveAccount();
-        if (account) {
-          setWallet(account.address);
-        }
+    const handleConnectWallet = async () => {
+        const { wallet } = await connectWallet();
+        setWallet(wallet);
       };
-      func();
-    }, []);
+          
+      const handleDisconnectWallet = async () => {
+        const { wallet } = await disconnectWallet();
+        setWallet(wallet);
+      };
+    
+      useEffect(() => {
+        const func = async () => {
+          const account = await getActiveAccount();
+          if (account) {
+            setWallet(account.address);
+          }
+        };
+        func();
+      }, []);
 
 
 
+const NAV__LINKS = [
+    {
+        display: 'Home',
+        url: '/home' 
+    },
 const NAV__LINKS = [
     {
         display: 'Home',
@@ -99,6 +104,8 @@ const NAV__LINKS = [
                                 </div>
                               )
                             }
+
+                      </div>
 
                       </div>
 
