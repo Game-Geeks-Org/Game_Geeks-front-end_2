@@ -19,124 +19,126 @@ import './Homegame.css'
 
 function Games() {
   const [game, setGame] = useState(false)
-  useEffect(() =>{
-    const interval = setInterval( async() =>{
+  useEffect(() => {
+    const interval = setInterval(async () => {
       const account = await getActiveAccount()
 
-      if(account){
+      if (account) {
         setGame(true)
-      }else{
+      } else {
         setGame(false)
       }
-    },[])
+    }, [])
     return () => clearInterval(interval)
   })
 
 
 
- 
 
-    // AUTOPLAY SLIDER
-    const settings = {
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 7000,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        initialSlide: 0,
-        
-        responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      };
+
+  // AUTOPLAY SLIDER
+  const settings = {
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    initialSlide: 0,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
 
   return (
-   <section className='container'>
-    <div className='game_section'>
-    <h2 className='game_title'>Play <span>Games</span> </h2>
-    <div className=''> 
-        <div className='App '>
-        <Slider {...settings}>
-    <div className='w-full'>
-        <div className='image-area'>
-        <img  className='slider_img' src={image}  alt='game'/>
-            <div className='img-btn'>
-                  {(game) ? (
-                    <div className='text-white'>
-                          <Link to="/spaceshooter"><button className=''>Play</button></Link>
-                    </div>
-                  ):(
-                    <div className=''> connect wallet to play Game</div>
-                  )}
-            </div>
-        </div>
-          
-    </div>
-    <div className='w-full'>
-        <div className='image-area'>
-        <img  className='slider_img' src={image2}  alt='game'/>
-            <div className='img-btn'>
-            <Link to="#"><button className=''>Coming Soon</button></Link>
-            </div>
-        </div>
-          
-    </div>
-    <div className='w-full'>
-        <div className='image-area'>
-        <img  className='slider_img' src={image3}  alt='game'/>
-            <div className='img-btn'>
-              <Link to="#"><button className=''>Coming Soon</button></Link>
-            </div>
-        </div>
-          
-    </div>
-    <div className='w-full'>
-        <div className='image-area'>
-        <img  className='slider_img' src={image}  alt='game'/>
-            <div className='img-btn'>
-            <Link to="/spaceshooter"><button className=''>Play</button></Link>
-            </div>
-        </div>
-          
-    </div>
-    </Slider>
+    <section className='container'>
+      <div className='game_section'>
+        <h2 className='game_title'>Play <span>Games</span> </h2>
+        <div className=''>
+          <div className='App '>
+            <Slider {...settings}>
+              <div className='w-full'>
+                <div className='image-area'>
+                  <img className='slider_img' src={image} alt='game' />
+                  <div className='img-btn'>
+                    {(game) ? (
+                      <div className='text-white'>
+                        <Link to="/spaceshooter"><button className=''>Play</button></Link>
+                      </div>
+                    ) : (
+                      <div className='text-white'>
+                        <Link to="/spaceshooter"><button className=''>Play</button></Link>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+              </div>
+              <div className='w-full'>
+                <div className='image-area'>
+                  <img className='slider_img' src={image2} alt='game' />
+                  <div className='img-btn'>
+                    <Link to="#"><button className=''>Coming Soon</button></Link>
+                  </div>
+                </div>
+
+              </div>
+              <div className='w-full'>
+                <div className='image-area'>
+                  <img className='slider_img' src={image3} alt='game' />
+                  <div className='img-btn'>
+                    <Link to="#"><button className=''>Coming Soon</button></Link>
+                  </div>
+                </div>
+
+              </div>
+              {/* <div className='w-full'>
+                <div className='image-area'>
+                  <img className='slider_img' src={image} alt='game' />
+                  <div className='img-btn'>
+                    <Link to="/spaceshooter"><button className=''>Play</button></Link>
+                  </div>
+                </div>
+
+              </div> */}
+            </Slider>
+
+          </div>
 
         </div>
- 
-    </div>
-<div className='text-center'>
+        {/* <div className='text-center'>
 <button className='view_btn'>View all</button>
-</div>
+</div> */}
 
-    </div>
-    
-   </section>
+      </div>
+
+    </section>
   )
 }
 

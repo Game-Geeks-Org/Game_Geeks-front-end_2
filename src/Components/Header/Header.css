@@ -1,214 +1,189 @@
-.header{
-    width: 100%;
-    height: 70px;
-    line-height: 70px;
+.header {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: black;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  column-gap: 2.7rem;
+  text-decoration: none;
+  list-style: none;
+  font-size: 20px;
+}
+
+.connect_btn {
+  line-height: normal !important;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 20px !important;
+  border: 1px solid white;
+  padding: 9px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.connect_btn:hover {
+  background: #c0013a;
+}
+
+.wallet_address_wrapper {
+  line-height: normal !important;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 20px !important;
+  border: 1px solid white;
+  padding: 9px;
+  border-radius: 15px;
+}
+
+.disconnect_wrapper .disconnect {
+  cursor: pointer;
+  position: absolute;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+.disconnect_wrapper,
+span i {
+  margin-bottom: 100px;
+  font: bold;
+  margin: auto 10px;
+  color: #fff;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s ease;
+}
+
+.nav-item a:hover {
+  color: white;
+  background: transparent;
+  border: 2px solid #fe53bb;
+  padding: 2px 7px;
+  border-radius: 50px;
+  outline: none;
+}
+
+.active {
+  color: white;
+  background: transparent;
+  border: 1px solid #fe53bb;
+  padding: 4px 20px;
+  border-radius: 50px;
+  outline: none;
+}
+
+.nav-right .btn {
+  padding: 7px, 25px;
+  border: 1px solid white;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.btn {
+  color: #fff !important;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.mobile_menu {
+  color: white;
+  font-size: 1.7rem;
+  cursor: pointer;
+  display: none;
+}
+
+@media only screen and (max-width: 786px) {
+  .nav__menu {
     position: fixed;
     top: 0;
     left: 0;
-    z-index:1;
-}
-
-
-
-
-.navigation{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-.nav__list{
-    display: flex;
-    align-items: center;
-    column-gap: 2.7rem;
-    text-decoration: none;
-    list-style: none;
-    font-size: 20px;
-}
-
-
-.connect_btn{
-    line-height: normal !important;
-    background: transparent;
-    color: white;
-    cursor: pointer;
-    font-size: 20px !important;
-    border: 1px solid white;
-    padding: 9px;
-    border-radius: 15px;
-    position: relative;
-}
-
-
-.connect_btn:hover{
-    background: #C0013A;
-}
-
-.wallet_address_wrapper{
-    line-height: normal !important;
-    background: transparent;
-    color: white;
-    cursor: pointer;
-    font-size: 20px !important;
-    border: 1px solid white;
-    padding: 9px;
-    border-radius: 15px;
-}
-
-
-.disconnect_wrapper .disconnect{
-    cursor: pointer;
-    position:  absolute;
-    margin-left: 20px;
-    border-radius: 20px;
-
-}
-
-.disconnect_wrapper, span i{
-    margin-bottom: 100px;
-    font: bold;
-    margin: auto 10px;
-    color: #fff;
-}
-
-
-
-
-.nav-item a{
-    text-decoration: none;
-    color: white;
-    transition: 0.4s ease;
-}
-
-.nav-item a:hover{
-    color: white;
-    background: transparent;
-    border: 2px solid #FE53BB;
-    padding: 2px 7px;
-    border-radius: 50px;
-    outline: none;
-    
-   
-}
-
-.active{
-    color: white;
-    background: transparent;
-    border: 1px solid #FE53BB;
-    padding: 4px 20px;
-    border-radius: 50px;
-    outline: none;
-}
-
-.nav-right .btn{
-    padding: 7px, 25px;
-    border: 1px solid white;
-    border-radius: 50px;
-    display: inline-block;
-}
-
-.btn{
-    color: #fff !important;
-    text-decoration: none;
-    font-size: medium;
-}
-
-
-.mobile_menu{
-    color: white;
-    font-size: 1.7rem;
-    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#14141f83, #1414f81f);
+    z-index: 222222;
     display: none;
+  }
 
+  .active__menu {
+    display: block;
+  }
+
+  .nav__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: #343444;
+    z-index: 333333;
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .mobile_menu {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#14141f83, #1414f81f);
+    z-index: 222222;
+    display: none;
+  }
+
+  .active__menu {
+    display: block;
+  }
+
+  .nav__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: #343444;
+    z-index: 333333;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+
+  .mobile_menu {
+    display: block;
+  }
+
+  .btn {
+    padding: 4px 25px !important;
+  }
+  .btn a {
+    font-size: 0.7rem !important;
+  }
 }
 
-
-
-@media only screen and (max-width: 786px){
-    .nav__menu{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(#14141f83, #1414f81f);
-        z-index: 222222;
-        display: none;
-    }
-
-    .active__menu{
-        display: block;
-    }
-
-    
-
-    .nav__list{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 250px;
-        height: 100%;
-        background: #343444;
-        z-index: 333333;
-        flex-direction: column;
-        padding: 40px;
-    }
-
-    .mobile_menu{
-        display: block;
-
-    }
+@media only screen and (max-width: 375px) {
+  .btn {
+    font-size: 0.7rem !important;
+  }
 }
-@media only screen and (max-width: 1024px){
-    .nav__menu{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(#14141f83, #1414f81f);
-        z-index: 222222;
-        display: none;
-    }
-
-    .active__menu{
-        display: block;
-    }
-
-    
-
-    .nav__list{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 250px;
-        height: 100%;
-        background: #343444;
-        z-index: 333333;
-        flex-direction: column;
-        padding-top: 40px;
-    }
-
-    .mobile_menu{
-        display: block;
-
-    }
-
-    .btn{
-        padding: 4px 25px !important;
-    }
-    .btn a{
-        font-size: 0.7rem !important;
-    }
-}
-
-
-@media only screen and (max-width: 375px){
-    .btn{
-        font-size: 0.7rem !important;
-    }   
-}
-
-
-
