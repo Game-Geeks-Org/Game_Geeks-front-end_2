@@ -140,7 +140,7 @@ function Games() {
     </div>
 <div className='text-center'>
 <button className='view_btn'>View all</button>
-</div> */}
+</div> 
 
       </div>
 
