@@ -58,7 +58,6 @@ export function Header() {
       };
       func();
     }, []);
-    
 
 
 
@@ -66,19 +65,19 @@ const headerRef = useRef(null)
 
 const menuRef = useRef(null)
 
-useEffect(() => {
-window.addEventListener('scroll',() => {
-    if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
-        headerRef.current.classList.add('header_shrink')
-    }else{
-        headerRef.current.classList.remove('header_shrink')
-    }
-})
-return()=>{} 
+// useEffect(() => {
+// window.addEventListener('scroll',() => {
+//     if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+//         headerRef.current.classList.add('header_shrink')
+//     }else{
+//         headerRef.current.classList.remove('header_shrink')
+//     }
+// })
+// return()=>{} 
 
 
 
-},[])
+// },[])
 
 const toggleMenu = () => menuRef.current.classList.toggle('active__menu')
   return (

@@ -115,15 +115,6 @@ function Games() {
         </div>
           
     </div>
-    <div className='w-full'>
-        <div className='image-area'>
-        <img  className='slider_img' src={image}  alt='game'/>
-            <div className='img-btn'>
-            <Link to="/spaceshooter"><button className=''>Play</button></Link>
-            </div>
-        </div>
-          
-    </div>
     </Slider>
 
         </div>
