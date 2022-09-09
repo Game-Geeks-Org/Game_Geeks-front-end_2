@@ -38,8 +38,8 @@ function Games() {
   // AUTOPLAY SLIDER
   const settings = {
     dots: true,
-    autoplay: true,
-    autoplaySpeed: 7000,
+    // autoplay: true,
+    // autoplaySpeed: 7000,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
@@ -76,53 +76,53 @@ function Games() {
 
 
   return (
-   <section className='container'>
-    <div className='game_section'>
-    <h2 className='game_title'>Play <span>Games</span> </h2>
-    <div className=''>
-        <div className='App '>
-        <Slider {...settings}>
-    <div className='w-full'>
-        <div className='image-area'>
-        <img  className='slider_img' src={image}  alt='game'/>
-            <div className='img-btn'>
-                  {(game) ? (
-                    <div className='text-white'>
+    <section className='container'>
+      <div className='game_section'>
+        <h2 className='game_title'>Play <span>Games</span> </h2>
+        <div className=''>
+          <div className='App '>
+            <Slider {...settings}>
+              <div className='w-full'>
+                <div className='image-area'>
+                  <img className='slider_img' src={image} alt='game' />
+                  <div className='img-btn'>
+                    {(game) ? (
+                      <div className='text-white'>
                         <Link to='/spaceshooter'>  <button className=''>Play</button></Link>
-                    </div>
-                  ):(
-                    <div className=''> connect wallet to play game</div>
-                  )}
-            </div>
-        </div>
-          
-    </div>
-    <div className=''>
-        <div className='image-area'>
-        <img  className='slider_img' src={image3}  alt='game'/>
-            <div className='img-btn'>
-            <button className=''>Coming Soon</button>
-            </div>
-        </div>
-    
-    </div>
-    <div className=''>
-        <div className='image-area'>
-        <img  className='slider_img' src={image2}  alt='game'/>
-            <div className='img-btn'>
-            <button className=''>Coming Soon</button>
-            </div>
-        </div>
-          
-    </div>
-    </Slider>
+                      </div>
+                    ) : (
+                      <div className=''> connect wallet to play game</div>
+                    )}
+                  </div>
+                </div>
+
+              </div>
+              <div className=''>
+                <div className='image-area'>
+                  <img className='slider_img' src={image3} alt='game' />
+                  <div className='img-btn'>
+                    <button className=''>Coming Soon</button>
+                  </div>
+                </div>
+
+              </div>
+              <div className=''>
+                <div className='image-area'>
+                  <img className='slider_img' src={image2} alt='game' />
+                  <div className='img-btn'>
+                    <button className=''>Coming Soon</button>
+                  </div>
+                </div>
+
+              </div>
+            </Slider>
+
+          </div>
 
         </div>
- 
-    </div>
-<div className='text-center'>
+        {/* <div className='text-center'>
 <button className='view_btn'>View all</button>
-</div> 
+</div>  */}
 
       </div>
 
