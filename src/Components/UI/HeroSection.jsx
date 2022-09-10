@@ -20,7 +20,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "#C0013AE8", marginTop: "70px", padding:"0", borderRadius: "60px", position:"absolute", left:"350px", top:"380px", right:"0" }}
+      style={{ ...style, display: "block", background: "#C0013AE8", padding:"0", borderRadius:"60px", marginTop:"50px",}}
       onClick={onClick}
     />
   );
@@ -31,7 +31,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "#C0013AE8", marginTop: "70px", padding:"0", borderRadius: "60px",  position:"absolute", left:"200px", top:"380px", right:"300px"}}
+      style={{ ...style, display: "block", background: "#C0013AE8", borderRadius:"60px", marginTop:"50px", position:"absolute"}}
       onClick={onClick}
     />
   );
@@ -69,7 +69,7 @@ function HeroSection() {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            initialSlide: 2
+            initialSlide: 1
           }
         },
         {
@@ -85,7 +85,7 @@ function HeroSection() {
     <section className='hero__section'>
       <Container>
         <Row>
-          <Col lg='6' md='6'>
+          <Col lg='6' md='8' sm='8' >
             <div className='hero__content'>
               <h4 className='hero__title'>PLAY TO <span className='win'>WIN</span></h4>
               <p className='desc'>A Decentralized Gaming Hub built over Tezos <br /> Blockchain. </p>
