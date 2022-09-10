@@ -74,6 +74,11 @@
     margin-left: 150px;
 }
 
+.lord_img{
+    margin-left: 40px !important;
+
+}
+
 
 
 
@@ -88,6 +93,22 @@
         display: flex;
         flex-direction: column;
     }
+/* 
+    #root > div > section > aside > div > div.pb-10{
+        margin-bottom: 100px;
+    } */
+
+
+    #root > div > section > aside > div > div.cod_img > div > img{
+        width: 100%;
+        margin: 0 !important;
+        margin-top: 40px !important;
+        
+    }
+
+    #root > div > section > aside > div > div.pb-10 > div{
+        width: 100%;
+    }
 
 
     .wallet_dash{
@@ -101,11 +122,10 @@
         font-size: 23px;
     }
 
+    .game-background p{
+        font-size: 20px;
+    }
 
-.cod_img img{
-    width: 100%;
-
-}
 
 
 .edit_btn{
@@ -131,6 +151,20 @@
     .game_asset_section{
         display: flex;
         flex-direction: column;
+    }
+
+
+    .wallet_dash{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #root > div > section > aside > div > div.cod_img > div > img{
+        width: 100%;
+        margin: 0 !important;
+        margin-top: 40px !important;
+        
     }
 
 

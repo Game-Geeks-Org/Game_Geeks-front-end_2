@@ -85,15 +85,15 @@ function DashBoard() {
 
             </div>
             <div className='cod_img'>
-              <div className='mb-3 rounded-5'>
-                <img src={cod} className='rounded-5' alt='cod' />
-              </div>
               <div className='mb-3'>
+                <img src={cod} width='600px' className='rounded-5 lord_img' alt='cod' />
+              </div>
+              {/* <div className='mb-3'>
                 <img src={image2} className='rounded-5' alt='cod' />
               </div>
               <div className='mb-3'>
                 <img src={image3} className='rounded-5' alt='cod' />
-              </div>
+              </div> */}
             </div>
           </div>
 

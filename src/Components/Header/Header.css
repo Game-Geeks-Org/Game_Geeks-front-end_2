@@ -116,7 +116,7 @@
     font-size: 20px;
     background: none;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 551px) {
     .logo {
       display: flex;
       position: absolute;

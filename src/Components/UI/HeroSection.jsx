@@ -20,7 +20,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "#C0013AE8", marginTop: "50px", padding:"0", borderRadius: "60px", position:"absolute", left:"300px", top:"380px", right:"0" }}
+      style={{ ...style, display: "block", background: "#C0013AE8", marginTop: "70px", padding:"0", borderRadius: "60px", position:"absolute", left:"350px", top:"380px", right:"0" }}
       onClick={onClick}
     />
   );
@@ -31,7 +31,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "#C0013AE8", marginTop: "50px", borderRadius: "60px",  position:"absolute", left:"170px", top:"380px", right:"300px"}}
+      style={{ ...style, display: "block", background: "#C0013AE8", marginTop: "70px", padding:"0", borderRadius: "60px",  position:"absolute", left:"200px", top:"380px", right:"300px"}}
       onClick={onClick}
     />
   );
@@ -50,7 +50,7 @@ function HeroSection() {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      initialSlide: 0,
+      initialSlide: 1,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
   
@@ -99,12 +99,12 @@ function HeroSection() {
           <Col lg='6' md='6'>
               <div className='App'>
               <Slider {...settings}>
-                    <div className='hero-img'> <img src={img2} width='500px'  alt=''/> </div>
-                    <div className='hero-img'> <img src={img3} width='500px'  alt=''/> </div>
-                    <div className='hero-img'> <img src={img4} width='500px'  alt=''/> </div>
-                    <div className='hero-img'> <img src={img5} width='500px'   alt=''/> </div>
-                    <div className='hero-img'> <img src={img6} width='500px'   alt=''/> </div>
-                    <div className='hero-img'> <img src={img7} width='500px'   alt=''/> </div>
+                    <div className='hero-img'> <img src={img2} alt=''/> </div>
+                    <div className='hero-img'> <img src={img3} alt=''/> </div>
+                    <div className='hero-img'> <img src={img4} alt=''/> </div>
+                    <div className='hero-img'> <img src={img5}  alt=''/> </div>
+                    <div className='hero-img'> <img src={img6}  alt=''/> </div>
+                    <div className='hero-img'> <img src={img7}  alt=''/> </div>
               </Slider>
 
               </div>
