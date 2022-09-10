@@ -25,7 +25,7 @@ const SS = () => {
     dataUrl: "SSBuild/Build/webgl.data",
     frameworkUrl: "SSBuild/Build/webgl.framework.js",
     codeUrl: "SSBuild/Build/webgl.wasm",
-  });
+   });
 
   const handleGameOver = useCallback((score) => {
     setIsGameOver(true);
@@ -54,6 +54,7 @@ const SS = () => {
             width: "100%",
             aspectRatio: "16:9",
             overflow: "hidden",
+      
           }}
         />
         {isGameOver === true && (
