@@ -1,5 +1,4 @@
 import React from 'react'
-import img1 from '../../Assets/Images/LORD OF SPACE 01.png'
 import { Link } from "react-router-dom";
 import './HeroSection.css'
 import { Container, Row, Col } from 'reactstrap'
@@ -8,12 +7,13 @@ import "slick-carousel/slick/slick-theme.css"
 import Slider from 'react-slick';
 
 // CAROUSEL IMAGES
-import  img2 from '../../Assets/Images/first NFT asset collection.png'
+import img2 from '../../Assets/Images/first NFT asset collection.png'
 import img3 from '../../Assets/Images/gaming asset marketplace.png'
 import img4 from '../../Assets/Images/gaming dashboard.png'
 import img5 from '../../Assets/Images/geekyhead NFT sale.png'
 import img6 from '../../Assets/Images/gaming dashboard.png'
 import img7 from '../../Assets/Images/more games.png'
+import img8 from '../../Assets/Images/game mode.png'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -45,7 +45,7 @@ function HeroSection() {
     const settings = {
       dots: false,
       autoplay: true,
-      autoplaySpeed: 7000,
+      autoplaySpeed: 2000,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
@@ -91,7 +91,7 @@ function HeroSection() {
               <p className='desc'>A Decentralized Gaming Hub built over Tezos <br /> Blockchain. </p>
 
               <div className="hero__btn d-flex align-items-center gap-4">
-                <Link to="/spaceshooter"><button className='hero-btn1 d-flex align-items-center gap-2'>Play Game</button></Link>
+                <a href="https://thelordofthespace.gamegeeks.online/" target="_blank" rel="noreferrer"><button className='hero-btn1 d-flex align-items-center gap-2'>Play Game</button></a>
                 <Link to="/dashboard"><button className='hero-btn2 d-flex align-items-center gap-2'>View Dashboard</button></Link>
               </div>
             </div>
@@ -105,6 +105,7 @@ function HeroSection() {
                     <div className='hero-img'> <img src={img5}  alt=''/> </div>
                     <div className='hero-img'> <img src={img6}  alt=''/> </div>
                     <div className='hero-img'> <img src={img7}  alt=''/> </div>
+                    <div className='hero-img'> <img src={img8}  alt=''/> </div>
               </Slider>
 
               </div>
@@ -116,9 +117,3 @@ function HeroSection() {
 }
 
 export default HeroSection
-
-{/* <div className="hero-img">
-
-              
-<Link to="/spaceshooter"> <img src={img1} alt='hero' /> </Link>
-</div> */}

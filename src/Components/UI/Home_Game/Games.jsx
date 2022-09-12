@@ -5,8 +5,7 @@ import image3 from '../../../Assets/Images/orbs collector coming soon.png'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import Slider from 'react-slick';
-import { Link } from "react-router-dom";
-import { connectWallet, getActiveAccount } from '../../../Utils/wallet';
+import {getActiveAccount } from '../../../Utils/wallet';
 
 
 
@@ -88,7 +87,7 @@ function Games() {
                   <div className='img-btn'>
                     {(game) ? (
                       <div className='text-white'>
-                        <Link to='/spaceshooter'>  <button className=''>Play</button></Link>
+                        <a href='https://thelordofthespace.gamegeeks.online/' target="_blank" rel="noreferrer">  <button className=''>Play</button></a>
                       </div>
                     ) : (
                       <div className=''> connect wallet to play game</div>

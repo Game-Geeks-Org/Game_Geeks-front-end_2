@@ -1,14 +1,14 @@
 
 import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
+import {ColorMode } from "@airgap/beacon-sdk";
 
-
-const preferredNetwork = "ghostnet";
+const preferredNetwork = "mainnet";
 const options = {
   name: "Game Geeks", 
  preferredNetwork: preferredNetwork,
 };
-const rpcURL = "https://rpc.ghostnet.teztnets.xyz/";
+const rpcURL = "https://mainnet.api.tez.ie";
 const wallet = new BeaconWallet(options);
 
 const getActiveAccount = async () => {
@@ -16,6 +16,7 @@ const getActiveAccount = async () => {
 };
 
 const connectWallet = async () => {
+  await wallet.client.setColorMode(ColorMode.DARK);
   let account = await wallet.client.getActiveAccount();
 
   if (!account) {

@@ -5,8 +5,6 @@ import Home from '../Pages/Home'
 import DashBoard from '../Pages/DashBoard'
 import Games from '../Pages/Games'
 import NftStore from '../Pages/NftStore'
-import SS from '../Pages/SpaceShooter'
-
 
 
 function Router() {
@@ -19,7 +17,6 @@ function Router() {
       <Route path='/dashboard' element={<DashBoard />}/>
       <Route path='/games' element={<Games />} />
       <Route path='/nftstore' element={<NftStore />}/>
-      <Route path="/spaceshooter" element={<SS />} />
    </Routes>
   )
 }

@@ -68,9 +68,9 @@ const NAV__LINKS = [
   return (
     <>
       <nav className='navbar'>
-       <div>
+       <a href="https://gamegeeks.online"><div>
        <img src={logo} width='100px' alt="" />
-        </div> 
+        </div></a>
                    <ul className={Mobile ? "nav-links-mobile" : "nav-links"} onClick={() => setMobile(false)}>
                            { NAV__LINKS.map((item,index) =>(
                                     <li className="nav-item" key={index}>
