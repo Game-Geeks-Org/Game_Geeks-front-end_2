@@ -51,15 +51,15 @@ const NAV__LINKS = [
         display: 'Dashboard',
         url: '/dashboard' 
     },
-    // {
-    //     display: 'NFT Store',
-    //     url: '/nftstore' 
-    // },
+    {
+        display: 'NFT Store',
+        url: '/nftstore' 
+    },
   
-    // {
-    //     display: 'Games',
-    //     url: '/games' 
-    // },
+    {
+        display: 'Games',
+        url: '/game'
+    },
    
 ]
 

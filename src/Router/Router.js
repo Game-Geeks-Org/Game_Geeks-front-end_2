@@ -15,7 +15,7 @@ function Router() {
       <Route path='/home'element={<Navigate to='/'/>}/>
       <Route path='/' element={<Home />}/>
       <Route path='/dashboard' element={<DashBoard />}/>
-      <Route path='/games' element={<Games />} />
+      <Route path='/Game' element={<Games />}/>
       <Route path='/nftstore' element={<NftStore />}/>
    </Routes>
   )

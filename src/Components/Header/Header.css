@@ -8,6 +8,7 @@
   a {
     text-decoration: none;
   }
+
   li {
     list-style-type: none;
   }
@@ -44,6 +45,7 @@
       border: 1px solid white;
       padding: 9px;
       border-radius: 15px;
+  
   }
   
   .active{
@@ -116,7 +118,7 @@
     font-size: 20px;
     background: none;
   }
-  @media (max-width: 551px) {
+  @media only screen and (max-width: 991px){
     .logo {
       display: flex;
       position: absolute;
@@ -150,7 +152,7 @@
       color: #fff;
     }
 
-    #root > div > nav > ul > div > div{
+     ul > div > div{
       width: 350px;
       text-align: center;
       color: black;
@@ -159,14 +161,45 @@
     }
 
 
-    #root > div > nav > ul > li > a{
+    ul > li > a{
       color: black;
     }
 
     
-    #root > div > nav > ul > li > a:hover{
+    ul > li > a:hover{
       opacity: 0.3;
     }
-    
+
+    .connect_btn{
+      left: 41.5%;
+      margin-top: 15px !important;
+      text-align: center;
+    }
+  
+
   }
   
+
+
+
+
+  @media only screen and (max-width: 450px){
+    .connect_btn{
+     left: 30%;
+     right: 0;
+     bottom: 0;
+     top: 0;
+    }
+  }
+
+
+
+
+  @media only screen and (max-width: 540px){
+    .connect_btn{
+      left: 37% !important;
+      margin-top: 15px !important;
+      text-align: center;
+    }
+  
+  }
