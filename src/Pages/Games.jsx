@@ -6,11 +6,15 @@ import menu from '../Assets/Images/filter-3-fill.png'
 import GameCards from '../Components/UI/GameCards/GameCards'
 import { GAME__DATA } from '../Assets/Data/data'
 import { Container, Row, Col } from 'reactstrap'
+import Button from '../Components/Filter/Button'
+import {AnimatePresence, motion} from "framer-motion/dist/framer-motion"
 
 
 
 
 
+const  allCategories = ['More', ...new Set(GAME__DATA.map(item =>  item.category))]
+console.log(allCategories)
 
 
 
@@ -24,6 +28,19 @@ import { Container, Row, Col } from 'reactstrap'
 
 function Games() {
   const [data, setData] = useState(GAME__DATA)
+  const [buttons, setButtons] = useState(allCategories)
+
+  
+  const filtered = (button) =>{
+    if(button === 'More'){
+      setData(GAME__DATA)
+      return;
+    }
+
+  const filteredData = GAME__DATA.filter(item => item.category === button)
+  setData(filteredData)
+}
+
 
   return (
     <section className='pb-52'>
@@ -70,16 +87,8 @@ function Games() {
                     <option value='low'>Low Rate</option>
                   </select>
           </div>
-        </div>
-        
-        <div className='filter_wrapper text-white'>
-          <button className='filter_btn'>Music</button>
-          <button className='filter_btn'>Art</button>
-          <button  className='filter_btn'>Sports</button>
-          <button  className='filter_btn'>Virtual</button>
-          <button  className='filter_btn' >Videos</button>
-          <button  className='filter_btn'>More</button>
-        </div>
+        </div> 
+          <Button  filtered={filtered} button={buttons}/>
        </div>
        <Container>
         <Row>
@@ -88,7 +97,14 @@ function Games() {
           data.map((item) =>{
             return(
               <Col lg='4' md='4' sm='6' className='mt-5'>
-              <GameCards item={item} key={item.id} />
+                 <motion.div
+            layout >
+            <AnimatePresence>
+
+                <GameCards item={item} key={item.id} />
+                </AnimatePresence>
+                    </motion.div>
+     
               </Col>
 
             )
@@ -106,6 +122,5 @@ function Games() {
 }
 
 export default Games
-
 
 

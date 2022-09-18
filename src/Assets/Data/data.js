@@ -55,61 +55,75 @@ export const GAME__DATA = [
     {   id: '1',
         name1: 'The Lord of the ',
         name2:'Space',
-        imgUrl: ss2
+        imgUrl: ss2,
+        category: "Music"
     },
     {   id: '2',
         name1: 'The Lord of the ',
         name2:'Space',
-        imgUrl: ss2
+        imgUrl: ss2,
+        category: "Art"
     },
     {   id: '3',
         name1: 'The Lord of the ',
         name2:'Space',
-        imgUrl: ss2
+        imgUrl: ss2,
+        category:"Sports"
+        
     },
     {   id: '4',
         name1: 'The Lord of the ',
         name2:'Space',
-        imgUrl: ss2
+        imgUrl: ss2,
+        category:"Virtual"
     },
     {   id: '5',
         name1: 'The Lord of the ',
         name2:'Space',
-        imgUrl: ss2
+        imgUrl: ss2,
+        category:"Videos"
     },
     {   id: '6',
         name1: 'The Lord of the ',
         name2:'Space',
-        imgUrl: ss2
+        imgUrl: ss2,
+        category:"Videos"
     },
     {   id: '7',
         name1: 'The Lord of the ',
         name2:'Space',
-        imgUrl: ss2
+        imgUrl: ss2,
+        category: "Music"
     },
     {   id: '8',
         name1: 'The Lord of the ',
         name2:'Space',
-        imgUrl: ss2
+        imgUrl: ss2,
+        category: "Art"
     },
     {   id: '9',
         name1: 'The Lord of the ',
         name2:'Space',
-        imgUrl: ss2
+        imgUrl: ss2,
+        category:"Sports",
     },
     {   id: '10',
         name1: 'The Lord of the ',
         name2:'Space',
-        imgUrl: ss2
+        imgUrl: ss2,
+        category:"Virtual",
+
     },
     {   id: '11',
         name1: 'The Lord of the ',
         name2:'Space',
-        imgUrl: ss2
+        imgUrl: ss2,
+        category: "Music"
     },
     {   id: '12',
         name1: 'The Lord of the ',
         name2:'Space',
-        imgUrl: ss2
+        imgUrl: ss2,
+        category:"Virtual",
     }
 ]

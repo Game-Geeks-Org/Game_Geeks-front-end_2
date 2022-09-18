@@ -181,23 +181,9 @@
   
 
 
-
-
-  @media only screen and (max-width: 450px){
-    .connect_btn{
-     left: 30%;
-     right: 0;
-     bottom: 0;
-     top: 0;
-    }
-  }
-
-
-
-
   @media only screen and (max-width: 540px){
     .connect_btn{
-      left: 37% !important;
+      left: 30% !important;
       margin-top: 15px !important;
       text-align: center;
     }
